@@ -22,7 +22,7 @@
 <header>
     <div class="hero">
         <a class="navbar-brand" href="{% url 'index' %}">
-            <img src="{% static 'img/logo.png' %}" alt="">
+            <img src="{% static 'img/LOGO_FIN.png' %}" alt="">
         </a>
 
         <div class="owl-carousel owl-theme heroCarousel">
@@ -68,14 +68,10 @@
 
 <section class="about section-margin mb-5">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center about-center">
             <div class="col-md-5">
                 <div class="about__img text-center text-md-left mb-5 mb-md-0">
                     <img class="img-fluid" src="{% static 'img/about.png' %}" alt="">
-                    <a href="#/" class="about__img__date text-center">
-                        <h3>26</h3>
-                        <p>Years <br> of Creativity</p>
-                    </a>
                 </div>
             </div>
             <div class="col-md-7 pl-xl-5">
@@ -103,38 +99,17 @@
                 <div class="media align-items-center overview__single">
                     <span class="overview__single__icon"><i class="ti-crown"></i></span>
                     <div class="media-body">
-                        <h3>286+</h3>
+                        <h3>80</h3>
                         <p>Projects done</p>
                     </div>
                 </div>
             </div>
-
-            <div class="col-sm-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
-                <div class="media align-items-center overview__single">
-                    <span class="overview__single__icon"><i class="ti-face-smile"></i></span>
-                    <div class="media-body">
-                        <h3>942+</h3>
-                        <p>Happy Clients</p>
-                    </div>
-                </div>
-            </div>
-
             <div class="col-sm-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
                 <div class="media align-items-center overview__single">
                     <span class="overview__single__icon"><i class="ti-user"></i></span>
                     <div class="media-body">
-                        <h3>263+</h3>
-                        <p>Real professionals</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-sm-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
-                <div class="media align-items-center overview__single">
-                    <span class="overview__single__icon"><i class="ti-gift"></i></span>
-                    <div class="media-body">
-                        <h3>2000+</h3>
-                        <p>Cups of Coffee</p>
+                        <h3>5</h3>
+                        <p>Team members</p>
                     </div>
                 </div>
             </div>
@@ -144,19 +119,19 @@
 
 
 <section class="portfolio section-margin">
-    <div class="container">
+    <div class="px-3">
         <div class="section-intro">
             <h4 class="section-intro__title">OUR PORTFOLIO</h4>
             <h2 class="section-intro__subtitle bottom-border">Latest Completed Projects</h2>
         </div>
 
-        <div class="row align-items-end pb-md-5 mb-4">
-            <div class="col-md-7 mb-4 mb-md-0">
+        <div class="row align-items-end">
+            <div class="col-md-6 mb-4 mb-md-0 px-0">
                 <div class="portfolio__img">
-                    <img class="img-fluid" src="{% static 'img/portfolio1.png' %}" alt="">
+                    <img class="img-fluid" src="{% static 'img/port_1.jpg' %}" alt="">
                 </div>
             </div>
-            <div class="col-md-5 mb-5 pl-xl-5">
+            <div class="col-md-6 mb-5 pl-xl-5">
                 <h4 class="section-intro__title left-border">December, 2018</h4>
                 <h2 class="section-intro__subtitle small">Pure Bedroom Architecture</h2>
                 <p>If you are looking at blank cassettes on the web lorem ipsum dolor sit amet, consectetur adipisicing
@@ -166,8 +141,8 @@
             </div>
         </div>
 
-        <div class="row align-items-end pb-md-5 mb-4">
-            <div class="col-md-5 mb-5 pr-xl-5 order-2 order-md-1">
+        <div class="row align-items-end">
+            <div class="col-md-6 mb-5 pr-xl-5 order-2 order-md-1">
                 <h4 class="section-intro__title left-border">December, 2018</h4>
                 <h2 class="section-intro__subtitle small">Pure Bedroom Architecture</h2>
                 <p>If you are looking at blank cassettes on the web lorem ipsum dolor sit amet, consectetur adipisicing
@@ -175,9 +150,9 @@
 
                 <a class="btn btn--rightBorder mt-3" href="#/">Read More</a>
             </div>
-            <div class="col-md-7 mb-4 mb-md-0 order-1 order-md-2">
+            <div class="col-md-6 mb-4 mb-md-0 order-1 order-md-2 px-0">
                 <div class="portfolio__img">
-                    <img class="img-fluid" src="{% static 'img/portfolio2.png' %}" alt="">
+                    <img class="img-fluid" src="{% static 'img/port_2.jpg' %}" alt="">
                 </div>
             </div>
         </div>
@@ -233,88 +208,6 @@
             </div>
             <div class="col-lg-5 text-center text-lg-right">
                 <a class="btn btn-dark btn--leftBorder btn--rightBorder" href="#/">Get Estimate</a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="testimonial section-margin">
-    <div class="container">
-        <div class="section-intro">
-            <h4 class="section-intro__title">OUR Testimonial</h4>
-            <h2 class="section-intro__subtitle bottom-border">What People Say About Us</h2>
-        </div>
-
-        <div class="owl-carousel owl-theme testimonialCarousel">
-            <div class="item">
-                <div class="media testimonial__slide">
-                    <img class="img-fluid mr-4" src="{% static 'img/testimonial.png' %}" width="120" height="125"
-                         alt="">
-                    <div class="media-body">
-                        <blockquote>
-                            “If you are looking at blank cassettes on the web lorem ipsum dolor sit amet, consectetur
-                            adipisicing elit, sed do eiusmod tempor incididunt amet.”
-                        </blockquote>
-                        <h3>Falcon Astle</h3>
-                        <p>Google Android</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="media testimonial__slide">
-                    <img class="img-fluid mr-4" src="{% static 'img/testimonial.png' %}" width="120" height="125"
-                         alt="">
-                    <div class="media-body">
-                        <blockquote>
-                            “If you are looking at blank cassettes on the web lorem ipsum dolor sit amet, consectetur
-                            adipisicing elit, sed do eiusmod tempor incididunt amet.”
-                        </blockquote>
-                        <h3>Falcon Astle</h3>
-                        <p>Google Android</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="media testimonial__slide">
-                    <img class="img-fluid mr-4" src="{% static 'img/testimonial.png' %}" width="120" height="125"
-                         alt="">
-                    <div class="media-body">
-                        <blockquote>
-                            “If you are looking at blank cassettes on the web lorem ipsum dolor sit amet, consectetur
-                            adipisicing elit, sed do eiusmod tempor incididunt amet.”
-                        </blockquote>
-                        <h3>Falcon Astle</h3>
-                        <p>Google Android</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="media testimonial__slide">
-                    <img class="img-fluid mr-4" src="{% static 'img/testimonial.png' %}" width="120" height="125"
-                         alt="">
-                    <div class="media-body">
-                        <blockquote>
-                            “If you are looking at blank cassettes on the web lorem ipsum dolor sit amet, consectetur
-                            adipisicing elit, sed do eiusmod tempor incididunt amet.”
-                        </blockquote>
-                        <h3>Falcon Astle</h3>
-                        <p>Google Android</p>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="media testimonial__slide">
-                    <img class="img-fluid mr-4" src="{% static 'img/testimonial.png' %}" width="120" height="125"
-                         alt="">
-                    <div class="media-body">
-                        <blockquote>
-                            “If you are looking at blank cassettes on the web lorem ipsum dolor sit amet, consectetur
-                            adipisicing elit, sed do eiusmod tempor incididunt amet.”
-                        </blockquote>
-                        <h3>Falcon Astle</h3>
-                        <p>Google Android</p>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
