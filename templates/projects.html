@@ -22,7 +22,7 @@
 
 <header class="hero-banner project-bg">
     <a class="navbar-brand" href="{% url 'index' %}">
-        <img src="{% static 'img/logo.png' %}" alt="">
+        <img src="{% static 'img/LOGO_FIN.png' %}" alt="">
     </a>
 
     <div class="container">
@@ -37,15 +37,39 @@
 <div class="portfolio-grid">
     <div class="portfolio-item">
         <img src="{% static 'img/port_2.jpg' %}" alt="">
+        <div class="overlay">
+            <h1>kek</h1>
+            <span>lorem impsum sosi pipsum</span>
+            <br>
+            <a href="" class="circle-button"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+        </div>
     </div>
     <div class="portfolio-item">
         <img src="{% static 'img/port_2.jpg' %}" alt="">
+        <div class="overlay">
+            <h1>kek</h1>
+            <span>lorem impsum sosi pipsum</span>
+            <br>
+            <a href="" class="circle-button"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+        </div>
     </div>
     <div class="portfolio-item">
         <img src="{% static 'img/port_2.jpg' %}" alt="">
+        <div class="overlay">
+            <h1>kek</h1>
+            <span>lorem impsum sosi pipsum</span>
+            <br>
+            <a href="" class="circle-button"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+        </div>
     </div>
     <div class="portfolio-item">
         <img src="{% static 'img/port_2.jpg' %}" alt="">
+        <div class="overlay">
+            <h1>kek</h1>
+            <span>lorem impsum sosi pipsum</span>
+            <br>
+            <a href="" class="circle-button"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+        </div>
     </div>
 </div>
 
@@ -135,16 +159,16 @@
 <script src="{% static 'vendor/owl-carousel/owl.carousel.min.js' %}"></script>
 
 <script>
-  var dropToggle = $('.menu_right > li').has('ul').children('a');
-  dropToggle.on('click', function () {
-    dropToggle.not(this).closest('li').find('ul').slideUp(200);
-    $(this).closest('li').children('ul').slideToggle(200);
-    return false;
-  });
+    var dropToggle = $('.menu_right > li').has('ul').children('a');
+    dropToggle.on('click', function () {
+        dropToggle.not(this).closest('li').find('ul').slideUp(200);
+        $(this).closest('li').children('ul').slideToggle(200);
+        return false;
+    });
 
-  $(".toggle_icon").on('click', function () {
-    $('body').toggleClass("open");
-  });
+    $(".toggle_icon").on('click', function () {
+        $('body').toggleClass("open");
+    });
 </script>
 </body>
 </html>
