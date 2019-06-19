@@ -26,42 +26,19 @@
         </a>
 
         <div class="owl-carousel owl-theme heroCarousel">
-            <div class="item">
+            {% for item in slider %}
+                <div class="item">
                 <div class="hero__slide">
-                    <img src="{% static 'img/hero-2.png' %}" alt="">
+                    <img src="{{ item.image.url }}" alt="">
                     <div class="hero__slideContent text-center">
-                        <h1>Dream Heaven City</h1>
-                        <p>If you are looking at blank cassettes on the web Lorem ipsum dolor sit amet, consectetur
-                            adipisicing eiusmod tempor incididunt.</p>
+                        <h1>{{ item.title }}</h1>
+                        <p>{{ item.description }}</p>
                         <a class="btn btn--leftBorder btn--rightBorder" href="#/">Details</a>
                         <span class="hero__slideContent--right"></span>
                     </div>
                 </div>
             </div>
-            <div class="item">
-                <div class="hero__slide">
-                    <img src="{% static 'img/hero-1.png' %}" alt="">
-                    <div class="hero__slideContent text-center">
-                        <h1>Dream Heaven City</h1>
-                        <p>If you are looking at blank cassettes on the web Lorem ipsum dolor sit amet, consectetur
-                            adipisicing eiusmod tempor incididunt.</p>
-                        <a class="btn btn--leftBorder btn--rightBorder" href="#/">Details</a>
-                        <span class="hero__slideContent--right"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="hero__slide">
-                    <img src="{% static 'img/hero-3.png' %}" alt="">
-                    <div class="hero__slideContent text-center">
-                        <h1>Dream Heaven City</h1>
-                        <p>If you are looking at blank cassettes on the web Lorem ipsum dolor sit amet, consectetur
-                            adipisicing eiusmod tempor incididunt.</p>
-                        <a class="btn btn--leftBorder btn--rightBorder" href="#/">Details</a>
-                        <span class="hero__slideContent--right"></span>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </header>
