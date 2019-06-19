@@ -12,7 +12,7 @@ urlpatterns = [
     path('contact/', contact, name='contact'),
     path('projects/', projects, name='projects'),
     path('service/', service, name='service'),
-    path('blog-post/', blog_post, name='blog_post'),
+    path('blog-post/<id>', blog_post, name='blog_post'),
 ]
 
 if settings.DEBUG:
