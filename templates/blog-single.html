@@ -22,13 +22,13 @@
 {% include 'navbar.html' %}
 
 <header class="hero-banner project-bg">
-    <a class="navbar-brand" href="index.html">
-        <img src="{%  static 'img/logo.png' %}" alt="">
+    <a class="navbar-brand" href="{% url 'index' %}">
+        <img src="{%  static 'img/LOGO_FIN.png' %}" alt="">
     </a>
     <div class="container">
         <h2 class="section-intro__subtitle">Blog Details</h2>
         <div class="btn-group breadcrumb">
-            <a href="index.html" class="btn">Home</a>
+            <a href="{% url 'index' %}" class="btn">Home</a>
             <span class="btn btn--rightBorder">Blog Details</span>
         </div>
     </div>
