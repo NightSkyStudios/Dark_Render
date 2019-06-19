@@ -1,11 +1,11 @@
 from django.shortcuts import render
 from .models import *
 
+
 # Create your views here.
 
 
 def index(request):
-
     slider = Slider.objects.all()
 
     ctx = {'slider': slider}
@@ -18,7 +18,10 @@ def about(request):
 
 
 def blog(request):
-    return render(request, 'blog.html')
+    posts = Post.objects.all().order_by('-date')
+
+    ctx = {'posts': posts}
+    return render(request, 'blog.html', ctx)
 
 
 def contact(request):
@@ -44,5 +47,8 @@ def service(request):
     return render(request, 'service.html')
 
 
-def blog_post(request):
-    return render(request, 'blog-single.html')
+def blog_post(request,id):
+    post = Post.objects.get(pk=id)
+
+    ctx = {'post': post}
+    return render(request, 'blog-single.html',ctx)

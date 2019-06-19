@@ -5,3 +5,4 @@ from .models import *
 
 admin.site.register(Slider)
 admin.site.register(Project)
+admin.site.register(Post)

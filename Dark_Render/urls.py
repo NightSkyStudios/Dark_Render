@@ -14,6 +14,7 @@ urlpatterns = [
     path('service/', service, name='service'),
     path('blog-post/', blog_post, name='blog_post'),
     path('project_page/<id>', project_page, name='project_page'),
+    path('blog-post/<id>', blog_post, name='blog_post'),
 ]
 
 if settings.DEBUG:
