@@ -107,6 +107,10 @@ button {
   margin-top: 30px;
 }
 
+.margin-after-header-small {
+  margin-top: 120px;
+}
+
 .section-intro__title {
   font-size: 0.75rem;
   color: #f9cc41;
@@ -846,21 +850,52 @@ button {
   box-shadow: inset 0px 3px 0px 0px #262533;
 }
 
+.contact {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+}
+@media screen and (max-width: 1000px) {
+  .contact {
+    width: 500px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 500px) {
+  .contact {
+    width: 250px;
+    grid-template-columns: 1fr;
+  }
+}
+.contact-info {
+  background-color: black;
+  padding: 1em;
+  width: 250px;
+}
 .contact-info__icon {
   margin-right: 20px;
 }
 .contact-info__icon i,
 .contact-info__icon span {
-  font-size: 20px;
+  font-size: 40px;
   color: #f9cc41;
 }
 .contact-info h3 {
   font-size: 1rem;
   font-weight: 300;
-  color: #fff;
+  color: #f9cc41;
 }
 .contact-info h3 a {
-  color: #fff;
+  color: #f9cc41;
+}
+
+.contact-container {
+  background-size: cover;
+  height: 80vh;
 }
 
 /* =================================== */
@@ -2740,7 +2775,7 @@ h6 {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 }
 .portfolio-grid .portfolio-item {
   height: 200px;

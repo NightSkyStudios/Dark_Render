@@ -29,7 +29,15 @@ def projects(request):
     projects = Project.objects.all()
 
     ctx = {'projects': projects}
-    return render(request, 'projects.html')
+    return render(request, 'projects.html', ctx)
+
+
+def project_page(request, id):
+    project = Project.objects.get(pk=id)
+
+    ctx = {'project': project}
+
+    return render(request, 'project_page.html', ctx)
 
 
 def service(request):

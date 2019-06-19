@@ -1,23 +1,50 @@
 .contact {
-	&-info {
-		&__icon {
-			margin-right: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1000px;
 
-			i,
-			span {
-				font-size: 20px;
-				color: $primary-color;
-			}
-		}
+    @media screen and (max-width: 1000px){
+        width: 500px;
+        grid-template-columns: repeat(2, 1fr);
+    }
 
-		h3 {
-			font-size: 1rem;
-			font-weight: 300;
-			color: $white;
+        @media screen and (max-width: 500px){
+        width: 250px;
+        grid-template-columns: 1fr;
+    }
 
-			a {
-				color: $white;
-			}
-		}
-	}
+    &-info {
+        background-color: $bodyBg;
+        padding: 1em;
+        width: 250px;
+
+        &__icon {
+            margin-right: 20px;
+
+            i,
+            span {
+                font-size: 40px;
+                color: $primary-color;
+            }
+        }
+
+        h3 {
+            font-size: 1rem;
+            font-weight: 300;
+            color: $primary-color;
+
+            a {
+                color: $primary-color;
+            }
+        }
+    }
+}
+
+.contact-container {
+    background-size: cover;
+    height: 80vh;
 }

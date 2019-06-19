@@ -35,42 +35,17 @@
 </header>
 
 <div class="portfolio-grid">
+    {% for item in projects %}
     <div class="portfolio-item">
-        <img src="{% static 'img/port_2.jpg' %}" alt="">
+        <img src="{{ item.image.url }}" alt="">
         <div class="overlay">
-            <h1>kek</h1>
-            <span>lorem impsum sosi pipsum</span>
+            <h1>{{ item.title }}</h1>
+            <span>{{ item.description|truncatechars:32 }}</span>
             <br>
-            <a href="" class="circle-button"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+            <a href="{% url "project_page" item.pk  %}" class="circle-button"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
         </div>
     </div>
-    <div class="portfolio-item">
-        <img src="{% static 'img/port_2.jpg' %}" alt="">
-        <div class="overlay">
-            <h1>kek</h1>
-            <span>lorem impsum sosi pipsum</span>
-            <br>
-            <a href="" class="circle-button"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
-        </div>
-    </div>
-    <div class="portfolio-item">
-        <img src="{% static 'img/port_2.jpg' %}" alt="">
-        <div class="overlay">
-            <h1>kek</h1>
-            <span>lorem impsum sosi pipsum</span>
-            <br>
-            <a href="" class="circle-button"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
-        </div>
-    </div>
-    <div class="portfolio-item">
-        <img src="{% static 'img/port_2.jpg' %}" alt="">
-        <div class="overlay">
-            <h1>kek</h1>
-            <span>lorem impsum sosi pipsum</span>
-            <br>
-            <a href="" class="circle-button"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
-        </div>
-    </div>
+    {% endfor %}
 </div>
 
 

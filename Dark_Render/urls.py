@@ -13,6 +13,7 @@ urlpatterns = [
     path('projects/', projects, name='projects'),
     path('service/', service, name='service'),
     path('blog-post/', blog_post, name='blog_post'),
+    path('project_page/<id>', project_page, name='project_page'),
 ]
 
 if settings.DEBUG:
