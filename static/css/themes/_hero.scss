@@ -14,5 +14,9 @@
 			background: url("../img/project-bg.png") left center no-repeat;
 			background-size: cover;
 		}
+
+		&.bg-cover{
+			background-size: cover;
+		}
 	}
 }

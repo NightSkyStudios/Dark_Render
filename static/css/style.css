@@ -93,6 +93,11 @@ button {
     height: 66px;
   }
 }
+.navbar-brand span {
+  text-decoration: none;
+  color: #8f8f8f;
+  font-size: 0.8em;
+}
 
 .mt-20 {
   margin-top: 20px;
@@ -439,6 +444,9 @@ button {
 }
 .hero-banner.project-bg {
   background: url("../img/project-bg.png") left center no-repeat;
+  background-size: cover;
+}
+.hero-banner.bg-cover {
   background-size: cover;
 }
 

@@ -18,19 +18,8 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-{% include 'navbar.html' %}
-<header class="hero-banner project-bg">
-    <a class="navbar-brand" href="{% url 'index' %}">
-        <img src="{% static 'img/LOGO_FIN.png' %}" alt="">
-    </a>
-    <div class="container">
-        <h2 class="section-intro__subtitle">About Us</h2>
-        <div class="btn-group breadcrumb">
-            <a href="{% url 'index' %}" class="btn">Home</a>
-            <span class="btn btn--rightBorder">About</span>
-        </div>
-    </div>
-</header>
+{% include 'hamburger.html' %}
+{% include "header_small.html" %}
 
 <section class="about section-margin mb-5">
     <div class="container">
