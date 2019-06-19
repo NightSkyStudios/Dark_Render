@@ -26,6 +26,9 @@ def contact(request):
 
 
 def projects(request):
+    projects = Project.objects.all()
+
+    ctx = {'projects': projects}
     return render(request, 'projects.html')
 
 
