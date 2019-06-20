@@ -78,7 +78,6 @@ button {
 
 .navbar-brand {
   position: absolute;
-  z-index: 50;
   top: 0;
   left: 0;
   padding: 1em;
@@ -109,7 +108,7 @@ button {
 }
 
 .margin-after-header-small {
-  margin-top: 120px;
+  margin-top: 140px;
 }
 
 .section-intro__title {
@@ -2820,6 +2819,7 @@ h6 {
   padding-top: 110px;
   position: relative;
   z-index: 1;
+  filter: grayscale(1);
 }
 .footer-bg:after {
   content: "";
@@ -2863,7 +2863,7 @@ h6 {
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 }
 .portfolio-grid .portfolio-item {
-  height: 200px;
+  height: 250px;
   width: 100%;
   overflow: hidden;
 }
@@ -2875,15 +2875,15 @@ h6 {
 }
 .portfolio-grid .portfolio-item .overlay {
   position: relative;
-  top: -200px;
-  height: 200px;
+  top: -250px;
+  height: 250px;
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 0;
   padding: 1em;
   border-left: 4px #f9cc41 solid;
   transition: opacity 0.2s ease-in;
 }
-.portfolio-grid .portfolio-item .overlay h1 {
+.portfolio-grid .portfolio-item .overlay h2 {
   color: white;
 }
 .portfolio-grid .portfolio-item .overlay span {

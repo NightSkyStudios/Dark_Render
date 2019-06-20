@@ -5,6 +5,7 @@
 		padding-top: 110px;
 		position: relative;
 		z-index: 1;
+		filter: grayscale(1);
 
 		&:after {
 			content: '';
