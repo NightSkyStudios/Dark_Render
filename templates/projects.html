@@ -39,7 +39,7 @@
     <div class="portfolio-item">
         <img src="{{ item.image.url }}" alt="">
         <div class="overlay">
-            <h1>{{ item.title }}</h1>
+            <h2>{{ item.title }}</h2>
             <span>{{ item.description|truncatechars:32 }}</span>
             <br>
             <a href="{% url "project_page" item.pk  %}" class="circle-button"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
