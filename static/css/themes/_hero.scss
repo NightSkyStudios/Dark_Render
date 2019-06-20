@@ -1,22 +1,25 @@
 .hero {
-	&-banner {
-		padding: 120px 0 50px 0;
+    &-banner {
+        padding: 120px 0 50px 0;
 
-		@media (min-width: 992px) {
-			padding: 125px 0 100px 0;
-		}
+        @media (min-width: 992px) {
+            padding: 125px 0 100px 0;
+        }
 
-		@media (min-width: 1200px) {
-			padding: 165px 0;
-		}
+        @media (min-width: 1200px) {
+            padding: 165px 0;
+        }
 
-		&.project-bg {
-			background: url("../img/project-bg.png") left center no-repeat;
-			background-size: cover;
-		}
+        &.project-bg {
+            background: url("../img/project-bg.png") left center no-repeat;
+            background-size: cover;
+        }
 
-		&.bg-cover{
-			background-size: cover;
-		}
-	}
+        &.bg-cover {
+            background-size: cover;
+            height: 50vh;
+
+            background-position: center;
+        }
+    }
 }

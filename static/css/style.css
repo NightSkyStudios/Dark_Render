@@ -82,6 +82,7 @@ button {
   top: 0;
   left: 0;
   padding: 1em;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .navbar-brand img {
   width: 200px;
@@ -139,6 +140,22 @@ button {
   color: #fff;
   margin-bottom: 1.5rem;
 }
+.section-intro__subtitle.bottom-border-center {
+  padding-bottom: 30px;
+  margin-bottom: 50px;
+  position: relative;
+}
+.section-intro__subtitle.bottom-border-center:after {
+  content: "";
+  display: block;
+  height: 2px;
+  min-width: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  background: #f9cc41;
+  transform: translateX(-50%);
+}
 .section-intro__subtitle.bottom-border {
   padding-bottom: 30px;
   margin-bottom: 50px;
@@ -154,7 +171,7 @@ button {
   left: 0;
   background: #f9cc41;
 }
-.section-intro__subtitle.small {
+.section-intro__subtitle.bottom-border.small {
   font-size: 2rem;
 }
 
@@ -452,6 +469,8 @@ button {
 }
 .hero-banner.bg-cover {
   background-size: cover;
+  height: 50vh;
+  background-position: center;
 }
 
 .breadcrumb {
@@ -589,6 +608,72 @@ button {
 .about__img__date:hover {
   color: #000000;
   opacity: 0.96;
+}
+
+.topsection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "photos description";
+  grid-gap: 2em;
+  margin: 2em;
+  padding: 1em;
+}
+@media screen and (max-width: 900px) {
+  .topsection {
+    grid-template-columns: 1fr;
+    grid-template-areas: "description" "photos";
+  }
+}
+.topsection .photo-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1em;
+  grid-auto-rows: 1fr;
+  grid-area: photos;
+}
+.topsection .photo-grid .photo-wraper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.topsection .photo-grid .photo-wraper:before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+  /* initial ratio of 1:1*/
+}
+.topsection .photo-grid img {
+  display: block;
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  object-fit: cover;
+  /* Equivalent of the background-size: cover; of a background-image */
+  object-position: center;
+}
+.topsection .description {
+  padding: 3em;
+  grid-area: description;
+}
+
+.partners {
+  text-align: center;
+}
+.partners .partners-grid {
+  padding: 0 1em;
+  margin: 2em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 2em;
+}
+.partners .partners-grid .partners-grid-item {
+  width: 100%;
+  height: 175px;
+  background-color: white;
 }
 
 .overview__single {

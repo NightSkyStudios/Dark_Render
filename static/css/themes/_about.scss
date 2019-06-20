@@ -1,33 +1,106 @@
 .about {
-	&__img {
-		position: relative;
+    &__img {
+        position: relative;
 
-		&__date {
-			display: inline-block;
-			position: absolute;
-			bottom: 11%;
-			left: 13%;
-			background: $primary-color;
-			color: $black;
-			padding: .9rem 1.2rem 1rem 1.2rem;
-			transition: all .4s;
+        &__date {
+            display: inline-block;
+            position: absolute;
+            bottom: 11%;
+            left: 13%;
+            background: $primary-color;
+            color: $black;
+            padding: .9rem 1.2rem 1rem 1.2rem;
+            transition: all .4s;
 
-			h3 {
-				font-size: 2rem;
-				font-weight: 500;
-				font-family: 'Oswald', sans-serif;
-				margin-bottom: .2rem;
-			}
+            h3 {
+                font-size: 2rem;
+                font-weight: 500;
+                font-family: 'Oswald', sans-serif;
+                margin-bottom: .2rem;
+            }
 
-			p {
-				margin-bottom: 0;
-				font-size: 0.75rem;
-			}
+            p {
+                margin-bottom: 0;
+                font-size: 0.75rem;
+            }
 
-			&:hover {
-				color: $black;
-				opacity: .96;
-			}
-		}
-	}
+            &:hover {
+                color: $black;
+                opacity: .96;
+            }
+        }
+    }
+}
+
+.topsection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "photos description";
+    grid-gap: 2em;
+    margin:2em;
+    padding: 1em;
+
+    @media screen and (max-width: 900px) {
+        grid-template-columns: 1fr;
+        grid-template-areas: "description"
+    "photos";
+    }
+
+    .photo-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+        grid-auto-rows: 1fr;
+        grid-area: photos;
+
+        .photo-wraper {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+
+            &:before {
+                content: "";
+                display: block;
+                padding-top: 100%; /* initial ratio of 1:1*/
+            }
+        }
+
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            object-fit: cover; /* Equivalent of the background-size: cover; of a background-image */
+            object-position: center;
+        }
+    }
+
+    .description {
+        padding: 3em;
+        grid-area: description;
+
+    }
+}
+
+.partners {
+    text-align: center;
+
+    .partners-grid {
+        padding: 0 1em;
+        margin: 2em;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 2em;
+
+        .partners-grid-item {
+            width: 100%;
+            height: 175px;
+            background-color: white;
+        }
+    }
 }
