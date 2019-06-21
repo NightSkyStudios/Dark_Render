@@ -40,14 +40,13 @@
     <div class="partners">
         <h3 class="section-intro__subtitle bottom-border-center">Partners</h3>
         <span>Lorem benis dolor denis namet</span>
-        <div class="partners-grid">
-            <img class="partners-grid-item" src="{% static "img/hero-2.png" %}" alt="">
-            <img class="partners-grid-item" src="{% static "img/LOGO_FIN.png" %}" alt="">
-            <img class="partners-grid-item" src="{% static "img/LOGO_FIN.png" %}" alt="">
-            <img class="partners-grid-item" src="{% static "img/LOGO_FIN.png" %}" alt="">
-            <img class="partners-grid-item" src="{% static "img/LOGO_FIN.png" %}" alt="">
-            <img class="partners-grid-item" src="{% static "img/LOGO_FIN.png" %}" alt="">
-        </div>
+        {% for item in partners %}
+            <div class="partners-grid">
+                <a href="{{ item.link }}">
+                <img src="{{ item.image.url }}" alt="">
+                    </a>
+            </div>
+        {% endfor %}
     </div>
 </section>
 
