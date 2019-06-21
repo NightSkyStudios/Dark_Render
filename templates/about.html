@@ -40,13 +40,15 @@
     <div class="partners">
         <h3 class="section-intro__subtitle bottom-border-center">Partners</h3>
         <span>Lorem benis dolor denis namet</span>
-        {% for item in partners %}
+
             <div class="partners-grid">
+                {% for item in partners %}
                 <a href="{{ item.link }}">
-                <img src="{{ item.image.url }}" alt="">
+                <img class="partners-grid-item"  src="{{ item.image.url }}" alt="">
                     </a>
+                 {% endfor %}
             </div>
-        {% endfor %}
+
     </div>
 </section>
 

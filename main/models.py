@@ -1,6 +1,8 @@
 from datetime import datetime
 
 from django.db import models
+from django.db.models.signals import post_delete
+from django.dispatch import receiver
 
 
 class Slider(models.Model):
@@ -86,3 +88,12 @@ class Partner(models.Model):
     class Meta:
         verbose_name = 'Партнер'
         verbose_name_plural = 'Партнери'
+
+
+@receiver(post_delete)
+def submission_delete(sender, instance, **kwargs):
+    try:
+        instance.image.delete(False)
+    except AttributeError:
+        pass
+

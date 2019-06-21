@@ -33,7 +33,7 @@
                         <div class="hero__slideContent text-center">
                             <h1>{{ item.title }}</h1>
                             <p>{{ item.description }}</p>
-                            <a class="btn btn--leftBorder btn--rightBorder" href="#/">Details</a>
+                            <a class="btn btn--leftBorder btn--rightBorder" href="{% url 'projects' %}">View More</a>
                             <span class="hero__slideContent--right"></span>
                         </div>
                     </div>
@@ -130,6 +130,21 @@
                 <div class="portfolio__img">
                     <img class="img-fluid" src="{% static 'img/port_2.jpg' %}" alt="">
                 </div>
+            </div>
+        </div>
+        <div class="row align-items-end">
+            <div class="col-md-6 mb-4 mb-md-0 px-0">
+                <div class="portfolio__img">
+                    <img class="img-fluid" src="{% static 'img/port_3.jpg' %}" alt="">
+                </div>
+            </div>
+            <div class="col-md-6 mb-5 pl-xl-5">
+                <h4 class="section-intro__title left-border">December, 2018</h4>
+                <h2 class="section-intro__subtitle small">Pure Bedroom Architecture</h2>
+                <p>If you are looking at blank cassettes on the web lorem ipsum dolor sit amet, consectetur adipisicing
+                    elit, sed do eiusmod tempor incididunt.</p>
+
+                <a class="btn btn--rightBorder mt-3" href="#/">Read More</a>
             </div>
         </div>
         <div class="text-center pt-5 mt-5">
