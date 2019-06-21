@@ -14,7 +14,10 @@ def index(request):
 
 
 def about(request):
-    return render(request, 'about.html')
+    partners = Partner.objects.all()
+
+    ctx = {'partners': partners}
+    return render(request, 'about.html', ctx)
 
 
 def blog(request):

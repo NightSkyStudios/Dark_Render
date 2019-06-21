@@ -66,3 +66,23 @@ class Post(models.Model):
     class Meta:
         verbose_name = 'Стаття Блогу'
         verbose_name_plural = 'Статті Блогу'
+
+
+class Partner(models.Model):
+    name = models.CharField('Назва',
+                            max_length=125,
+                            help_text='Назва')
+    image = models.ImageField('Зображення',
+                              upload_to='img/partners',
+                              null=True,
+                              blank=True)
+    link = models.URLField('Посилання',
+                           null=True,
+                           blank=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Партнер'
+        verbose_name_plural = 'Партнери'
