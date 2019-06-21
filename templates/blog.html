@@ -37,7 +37,7 @@
 <section class="post-content-area">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 posts-list">
+            <div class="col-lg-10 posts-list">
                 {% for item in posts %}
                 <div class="single-post row">
                     <div class="col-lg-3  col-md-3 meta-details">
@@ -50,7 +50,9 @@
                     </div>
                     <div class="col-lg-9 col-md-9 ">
                         <div class="feature-img">
+                            <a href="{% url 'blog_post' item.id %}">
                             <img class="img-fluid" src="{{ item.image.url }}" alt="">
+                            </a>
                         </div>
                         <a class="posts-title" href="{% url 'blog_post' item.id %}"><h3>{{ item.title }}</h3>
                         </a>

@@ -46,10 +46,6 @@ def project_page(request, id):
     return render(request, 'project_page.html', ctx)
 
 
-def service(request):
-    return render(request, 'service.html')
-
-
 def blog_post(request,id):
     post = Post.objects.get(pk=id)
 
