@@ -668,7 +668,7 @@ button {
   padding: 0 1em;
   margin: 2em;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 2em;
 }
 .partners .partners-grid .partners-grid-item {
