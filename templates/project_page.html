@@ -19,10 +19,28 @@
 <body>
 {% include "hamburger.html" %}
 
-<header class="hero-banner bg-cover" style="background-image: url({{ project.image.url }})">
-    <a class="navbar-brand" href="{% url 'index' %}">
-        <img src="{% static 'img/LOGO_FIN.png' %}" alt="">
-    </a>
+<header>
+    <div class="hero">
+        <a class="navbar-brand" href="{% url 'index' %}">
+            <img src="{% static 'img/LOGO_FIN.png' %}" alt="">
+        </a>
+
+        <div class="owl-carousel owl-theme heroCarousel">
+         <div class="item">
+                    <div class="hero__slide">
+                        <img src="{{ project.image.url }}" alt="">
+                    </div>
+                </div>
+             {% for photo in gallery %}
+                <div class="item">
+                    <div class="hero__slide">
+                        <img src="{{ photo.image.url }}" number="{{ forloop.counter }}" alt="">
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        </div>
 </header>
 
 <div class="container my-5">
@@ -41,6 +59,38 @@
 <script src="{% static 'vendor/owl-carousel/owl.carousel.min.js' %}"></script>
 
 <script>
+     var testimonialCarousel = $('.testimonialCarousel');
+    testimonialCarousel.owlCarousel({
+        loop: true,
+        margin: 80,
+        startPosition: 2,
+        nav: false,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            1000: {
+                items: 2,
+                loop: true
+            }
+        }
+    });
+
+    var heroCarousel = $('.heroCarousel');
+    heroCarousel.owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: false,
+        startPosition: 1,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
+            }
+        }
+    });
+
     var dropToggle = $('.menu_right > li').has('ul').children('a');
     dropToggle.on('click', function () {
         dropToggle.not(this).closest('li').find('ul').slideUp(200);

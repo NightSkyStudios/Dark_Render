@@ -40,8 +40,12 @@ def projects(request):
 
 def project_page(request, id):
     project = Project.objects.get(pk=id)
+    gallery = Photo.objects.filter(project=project)
 
-    ctx = {'project': project}
+    ctx = {
+        'project': project,
+        'gallery': gallery,
+    }
 
     return render(request, 'project_page.html', ctx)
 

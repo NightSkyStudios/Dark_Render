@@ -24,22 +24,33 @@
 <section class="margin-after-header-small">
     <div class="topsection">
         <div class="photo-grid">
-            <div class="photo-wraper"><img src="{% static "img/hero_1.jpg" %}" alt=""></div>
-            <div class="photo-wraper"><img src="{% static "img/hero_1.jpg" %}" alt=""></div>
-            <div class="photo-wraper"><img src="{% static "img/hero_1.jpg" %}" alt=""></div>
+            <div class="photo-wraper"><img src="{% static "img/about/2.jpg" %}" alt=""></div>
+            <div class="photo-wraper"><img src="{% static "img/about/3.jpg" %}" alt=""></div>
+            <div class="photo-wraper"><img src="{% static "img/about/1.jpg" %}" alt=""></div>
+            <div class="photo-wraper"><img src="{% static "img/about/4.jpg" %}" alt=""></div>
         </div>
         <div class="description">
-            <h3 class="section-intro__subtitle bottom-border">Words we live by</h3>
+            <h3 class="section-intro__subtitle bottom-border">WHO WE ARE</h3>
             <span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae cupiditate eius eum eveniet
-                expedita maiores non nulla odio, omnis possimus quam, saepe sint tempora temporibus totam unde ut
-                veritatis.
+                Founded by : Orest Moskal
+                <br>
+                <br>
+                Based in Lviv, Working Globally
+                <br>
+                   <br>
+                Partnered international architectures we work on a global scale from USE to Asia.
+                <br>
+                    <br>
+                DARK RENDER is based in the beautiful city of Lviv, where historical buildings hide a buzzing party, food and art scene.The DARK RENDER team is comprised of a diverse and skillful group of professionals who hail from over 4 different countries. This core team is constantly growing and evolving - both to expand our pool of talented artists and to grow our available capacity for our Clients.
+                <br>
+                <br>
+                Team,talented professionals working behind the scenes.
             </span>
         </div>
     </div>
     <div class="partners">
         <h3 class="section-intro__subtitle bottom-border-center">Partners</h3>
-        <span>Lorem benis dolor denis namet</span>
+        <span>PARTNERS CONFIDE US</span>
         <div class="partners-grid">
             {% for item in partners %}
                 <div class="partners-grid-wraper">
@@ -62,16 +73,16 @@
 
 <script>
 
-  var dropToggle = $('.menu_right > li').has('ul').children('a');
-  dropToggle.on('click', function () {
-    dropToggle.not(this).closest('li').find('ul').slideUp(200);
-    $(this).closest('li').children('ul').slideToggle(200);
-    return false;
-  });
+    var dropToggle = $('.menu_right > li').has('ul').children('a');
+    dropToggle.on('click', function () {
+        dropToggle.not(this).closest('li').find('ul').slideUp(200);
+        $(this).closest('li').children('ul').slideToggle(200);
+        return false;
+    });
 
-  $(".toggle_icon").on('click', function () {
-    $('body').toggleClass("open");
-  });
+    $(".toggle_icon").on('click', function () {
+        $('body').toggleClass("open");
+    });
 </script>
 </body>
 </html>

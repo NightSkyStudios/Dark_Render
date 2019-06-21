@@ -80,7 +80,8 @@ class Partner(models.Model):
                               blank=True)
     link = models.URLField('Посилання',
                            null=True,
-                           blank=True)
+                           blank=True,
+                           default='#')
 
     def __str__(self):
         return self.name
@@ -90,10 +91,18 @@ class Partner(models.Model):
         verbose_name_plural = 'Партнери'
 
 
+class Photo(models.Model):
+    image = models.ImageField('Зображення',
+                              upload_to='img',
+                              null=True,
+                              blank=True,
+                              help_text='Зображення буде відображатись на слайдері головної сторінки')
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
+
+
 @receiver(post_delete)
 def submission_delete(sender, instance, **kwargs):
     try:
         instance.image.delete(False)
     except AttributeError:
         pass
-
