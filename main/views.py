@@ -20,12 +20,6 @@ def about(request):
     return render(request, 'about.html', ctx)
 
 
-def blog(request):
-    posts = Post.objects.all().order_by('-date')
-
-    ctx = {'posts': posts}
-    return render(request, 'blog.html', ctx)
-
 
 def contact(request):
     return render(request, 'contact.html')
@@ -48,10 +42,3 @@ def project_page(request, id):
     }
 
     return render(request, 'project_page.html', ctx)
-
-
-def blog_post(request,id):
-    post = Post.objects.get(pk=id)
-
-    ctx = {'post': post}
-    return render(request, 'blog-single.html',ctx)

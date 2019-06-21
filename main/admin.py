@@ -26,5 +26,4 @@ class ProjectAdmin(admin.ModelAdmin):
 
 admin.site.register(Slider)
 admin.site.register(Project, ProjectAdmin)
-admin.site.register(Post)
 admin.site.register(Partner)

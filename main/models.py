@@ -45,30 +45,6 @@ class Project(models.Model):
         verbose_name_plural = 'Проекти'
 
 
-class Post(models.Model):
-    image = models.ImageField('Зображення',
-                              upload_to='img/blog',
-                              null=True,
-                              blank=True)
-    title = models.CharField('Заголовок',
-                             max_length=225,
-                             help_text='Заголовок статті')
-    text = models.TextField('Текст',
-                            help_text='Текст статті')
-    author = models.CharField('Автор',
-                              max_length=125,
-                              help_text='Автор')
-    date = models.DateTimeField('Дата публікації статті',
-                                default=datetime.now,
-                                blank=True)
-
-    def __str__(self):
-        return self.title
-
-    class Meta:
-        verbose_name = 'Стаття Блогу'
-        verbose_name_plural = 'Статті Блогу'
-
 
 class Partner(models.Model):
     name = models.CharField('Назва',
