@@ -40,13 +40,16 @@
     <div class="partners">
         <h3 class="section-intro__subtitle bottom-border-center">Partners</h3>
         <span>Lorem benis dolor denis namet</span>
-        {% for item in partners %}
-            <div class="partners-grid">
-                <a href="{{ item.link }}">
-                <img class="partners-grid-item" src="{{ item.image.url }}" alt="">
+        <div class="partners-grid">
+            {% for item in partners %}
+                <div class="partners-grid-wraper">
+                    <a href="{{ item.link }}">
+                        <img class="partners-grid-item" src="{{ item.image.url }}" alt="">
                     </a>
-            </div>
-        {% endfor %}
+                </div>
+
+            {% endfor %}
+        </div>
     </div>
 </section>
 
@@ -59,16 +62,16 @@
 
 <script>
 
-    var dropToggle = $('.menu_right > li').has('ul').children('a');
-    dropToggle.on('click', function () {
-        dropToggle.not(this).closest('li').find('ul').slideUp(200);
-        $(this).closest('li').children('ul').slideToggle(200);
-        return false;
-    });
+  var dropToggle = $('.menu_right > li').has('ul').children('a');
+  dropToggle.on('click', function () {
+    dropToggle.not(this).closest('li').find('ul').slideUp(200);
+    $(this).closest('li').children('ul').slideToggle(200);
+    return false;
+  });
 
-    $(".toggle_icon").on('click', function () {
-        $('body').toggleClass("open");
-    });
+  $(".toggle_icon").on('click', function () {
+    $('body').toggleClass("open");
+  });
 </script>
 </body>
 </html>
