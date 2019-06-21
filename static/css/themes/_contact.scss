@@ -7,12 +7,12 @@
     transform: translate(-50%, -50%);
     width: 1000px;
 
-    @media screen and (max-width: 1000px){
+    @media screen and (max-width: 1000px) {
         width: 500px;
         grid-template-columns: repeat(2, 1fr);
     }
 
-        @media screen and (max-width: 500px){
+    @media screen and (max-width: 500px) {
         width: 250px;
         grid-template-columns: 1fr;
     }
@@ -48,4 +48,15 @@
 .contact-container {
     background-size: cover;
     height: 80vh;
+
+    video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
 }
+
+}
+
+

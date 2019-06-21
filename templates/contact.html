@@ -25,7 +25,10 @@
 
 
 <section class="margin-after-header-small">
-    <div class="contact-container" style="background-image: url({% static "img/hero_1.jpg" %})">
+    <div class="contact-container" style="">
+        <video autoplay muted loop id="video">
+            <source src="{% static "video/timelapse.mp4" %}" type="video/mp4">
+        </video>
         <div class="contact">
             <div class="media contact-info">
                 <span class="contact-info__icon"><i class="fas fa-map"></i></span>
@@ -68,16 +71,16 @@
 <script src="{% static 'vendor/owl-carousel/owl.carousel.min.js' %}"></script>
 
 <script>
-    var dropToggle = $('.menu_right > li').has('ul').children('a');
-    dropToggle.on('click', function () {
-        dropToggle.not(this).closest('li').find('ul').slideUp(200);
-        $(this).closest('li').children('ul').slideToggle(200);
-        return false;
-    });
+  var dropToggle = $('.menu_right > li').has('ul').children('a');
+  dropToggle.on('click', function () {
+    dropToggle.not(this).closest('li').find('ul').slideUp(200);
+    $(this).closest('li').children('ul').slideToggle(200);
+    return false;
+  });
 
-    $(".toggle_icon").on('click', function () {
-        $('body').toggleClass("open");
-    });
+  $(".toggle_icon").on('click', function () {
+    $('body').toggleClass("open");
+  });
 </script>
 </body>
 </html>
