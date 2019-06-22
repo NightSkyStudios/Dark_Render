@@ -953,7 +953,7 @@ button {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 1000px;
@@ -992,6 +992,9 @@ button {
 .contact-info h3 a {
   color: #fdb100;
 }
+.contact-info p {
+  margin-bottom: 0;
+}
 
 .contact-container {
   background-size: cover;
@@ -999,10 +1002,11 @@ button {
 }
 .contact-container video {
   position: fixed;
-  right: 0;
-  bottom: 0;
+  left: 50vw;
+  top: 50vh;
   min-width: 100%;
   min-height: 100%;
+  transform: translate(-50%, -50%);
 }
 
 /* =================================== */
