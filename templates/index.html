@@ -51,7 +51,7 @@
                     <img class="img-fluid" src="{% static 'img/index/portret.png' %}" alt="">
                 </div>
             </div>
-            <div class="col-md-7 pl-xl-5">
+            <div class="col-md-7 pl-xl-5 text-center">
                 <div class="section-intro">
                     <h4 class="section-intro__title">About our Company</h4>
                     <h2 class="section-intro__subtitle">WHAT WE MAKE?</h2>
@@ -107,7 +107,7 @@
                     <img class="img-fluid" src="{% static 'img/index/1.jpg' %}" alt="">
                 </div>
             </div>
-            <div class="col-md-6 pl-xl-5">
+            <div class="col-md-6 pl-xl-5 text-center">
                 <h4 class="section-intro__title left-border">Visual</h4>
                 <h2 class="section-intro__subtitle small">Exterior visualization </h2>
                 <p style="margin-bottom: 0;">We model full detailed building in 3D, our artists will create atmospheric photo realistic images, to your liking</p>
@@ -116,7 +116,7 @@
         </div>
 
         <div class="row align-items-center">
-            <div class="col-md-6 pr-xl-5 order-2 order-md-1">
+            <div class="col-md-6 pr-xl-5 order-2 order-md-1 text-center">
                 <h4 class="section-intro__title left-border">Modeling</h4>
                 <h2 class="section-intro__subtitle small">Furniture Modeling</h2>
                 <p style="margin-bottom: 0;">You send drawings and materials images , and we create High Poly Model
@@ -137,7 +137,7 @@
                     <img class="img-fluid" src="{% static 'img/index/3.jpg' %}" alt="">
                 </div>
             </div>
-            <div class="col-md-6 pl-xl-5">
+            <div class="col-md-6 pl-xl-5 text-center">
                 <h4 class="section-intro__title left-border">Visual</h4>
                 <h2 class="section-intro__subtitle small">Interior visualization</h2>
                 <p style="margin-bottom: 0;">Provide interior images with detailed materials and lights </p>
@@ -173,23 +173,6 @@
 <script src="{% static 'vendor/owl-carousel/owl.carousel.min.js' %}"></script>
 
 <script>
-    var testimonialCarousel = $('.testimonialCarousel');
-    testimonialCarousel.owlCarousel({
-        loop: true,
-        margin: 80,
-        startPosition: 2,
-        nav: false,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            1000: {
-                items: 2,
-                loop: true
-            }
-        }
-    });
 
     var heroCarousel = $('.heroCarousel');
     heroCarousel.owlCarousel({
