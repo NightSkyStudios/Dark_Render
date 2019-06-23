@@ -63,17 +63,19 @@
 
 <script>
 
-    var heroCarousel = $('.heroCarousel');
+     var heroCarousel = $('.heroCarousel');
     heroCarousel.owlCarousel({
         center: true,
         autoplay: true,
-        autoplaySpeed: 20,
+        autoplaySpeed: 5000,
         animateOut: 'fadeOut',
         mergeFit: true,
         loop: true,
         margin: 10,
         nav: false,
-        autoWidth:true,
+        smartSpeed: 450,
+        autoHeight: true,
+        autoWidth: true,
         startPosition: 1,
         responsiveClass: true,
         responsive: {
