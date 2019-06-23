@@ -605,7 +605,7 @@ button {
   margin-bottom: 0;
   font-size: 0.75rem;
 }
-.about__img__date:hover {
+.about__img__date:active, .about__img__date:hover {
   color: #000000;
   opacity: 0.96;
 }
@@ -681,7 +681,6 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  margin: auto;
   max-height: 175px;
 }
 .partners .partners-grid .partners-grid-wraper .partners-grid-item img {
@@ -2889,6 +2888,11 @@ h6 {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
 }
+@media screen and (max-width: 550px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+}
 .portfolio-grid .portfolio-item {
   height: 455px;
   width: 100%;
@@ -2921,10 +2925,10 @@ h6 {
   font-size: 2em;
   text-align: center;
 }
-.portfolio-grid .portfolio-item:hover .overlay {
+.portfolio-grid .portfolio-item:active .overlay, .portfolio-grid .portfolio-item:hover .overlay {
   opacity: 1;
 }
-.portfolio-grid .portfolio-item:hover img {
+.portfolio-grid .portfolio-item:active img, .portfolio-grid .portfolio-item:hover img {
   filter: saturate(5);
   transform: scale(1.1);
 }
@@ -2939,7 +2943,7 @@ h6 {
   top: 5em;
   transition: color 0.2s, background-color 0.2s;
 }
-.circle-button:hover {
+.circle-button:active, .circle-button:hover {
   background-color: white;
   color: #f9cc41;
 }
