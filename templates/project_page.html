@@ -3,7 +3,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <title>{{ project.title }}</title>
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic"
           rel="stylesheet">
@@ -59,29 +62,18 @@
 <script src="{% static 'vendor/owl-carousel/owl.carousel.min.js' %}"></script>
 
 <script>
-     var testimonialCarousel = $('.testimonialCarousel');
-    testimonialCarousel.owlCarousel({
-        loop: true,
-        margin: 80,
-        startPosition: 2,
-        nav: false,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            1000: {
-                items: 2,
-                loop: true
-            }
-        }
-    });
 
     var heroCarousel = $('.heroCarousel');
     heroCarousel.owlCarousel({
+        center: true,
+        autoplay: true,
+        autoplaySpeed: 20,
+        animateOut: 'fadeOut',
+        mergeFit: true,
         loop: true,
         margin: 10,
         nav: false,
+        autoWidth:true,
         startPosition: 1,
         responsiveClass: true,
         responsive: {

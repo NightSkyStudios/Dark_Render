@@ -2887,10 +2887,10 @@ h6 {
 
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
 }
 .portfolio-grid .portfolio-item {
-  height: 250px;
+  height: 455px;
   width: 100%;
   overflow: hidden;
 }
@@ -2903,8 +2903,8 @@ h6 {
 }
 .portfolio-grid .portfolio-item .overlay {
   position: relative;
-  top: -250px;
-  height: 250px;
+  top: -455px;
+  height: 455px;
   background-color: rgba(0, 0, 0, 0.6);
   opacity: 0;
   padding: 1em;
@@ -2913,9 +2913,13 @@ h6 {
 }
 .portfolio-grid .portfolio-item .overlay h2 {
   color: white;
+  font-size: 5em;
+  text-align: center;
 }
 .portfolio-grid .portfolio-item .overlay span {
   color: white;
+  font-size: 2em;
+  text-align: center;
 }
 .portfolio-grid .portfolio-item:hover .overlay {
   opacity: 1;
@@ -2926,13 +2930,13 @@ h6 {
 }
 
 .circle-button {
-  padding: 1em;
-  border-radius: 2em;
+  padding: 2em;
+  border-radius: 50%;
   text-decoration: none;
   background-color: #f9cc41;
   color: white;
   position: relative;
-  top: 2em;
+  top: 5em;
   transition: color 0.2s, background-color 0.2s;
 }
 .circle-button:hover {
