@@ -54,16 +54,6 @@
             margin-bottom: 50px;
             position: relative;
 
-            &:after {
-                content: "";
-                display: block;
-                height: 2px;
-                min-width: 100px;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                background: $primary-color;
-            }
 
             &.small {
                 font-size: 2rem;

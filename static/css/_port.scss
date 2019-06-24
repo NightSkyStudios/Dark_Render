@@ -27,7 +27,7 @@
             background-color: rgba(black, .6);
             opacity: 0;
             padding: 1em;
-            border-left: 4px #f9cc41 solid;
+            border-left: 4px #fdb100 solid;
 
             transition: opacity .2s ease-in;
 
@@ -39,7 +39,7 @@
 
             span {
                 color: white;
-                font-size: 2em;
+                font-size: 1em;
                 text-align: center;
             }
 
@@ -61,12 +61,12 @@
 
 .circle-button {
     padding: 2em;
-    border-radius: 50%;
     text-decoration: none;
-    background-color: #f9cc41;
+    background-color: #fdb100;
     color: white;
     position: relative;
     top: 5em;
+    left: 25em;
 
 
 
@@ -75,6 +75,6 @@
     &:active,
     &:hover {
         background-color: white;
-        color: #f9cc41;
+        color: #fdb100;
     }
 }
