@@ -1,6 +1,6 @@
 from datetime import datetime
-
 from django.db import models
+from tinymce.models import HTMLField
 
 
 class Slider(models.Model):
@@ -32,8 +32,9 @@ class Project(models.Model):
     title = models.CharField('Заголовок',
                              max_length=225,
                              help_text='Заголовок проекта')
-    description = models.TextField('Опис',
-                                   help_text='Опис проекта')
+    short_description = models.CharField(max_length=128)
+    mce_description = HTMLField('Опис',
+                            help_text='Опис проекта')
 
     def __str__(self):
         return self.title
