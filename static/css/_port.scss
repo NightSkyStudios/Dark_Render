@@ -1,9 +1,13 @@
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+
+    @media screen and (max-width: 550px){
+        grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
 
     .portfolio-item {
-        height: 250px;
+        height: 455px;
         width: 100%;
         overflow: hidden;
 
@@ -11,38 +15,43 @@
             width: 100%;
             height: 100%;
             filter: saturate(100%);
-
+            object-fit: cover;
             transition: filter .2s, transform .2s;
         }
 
 
         .overlay {
             position: relative;
-            top: -250px;
-            height: 250px;
+            top: -455px;
+            height: 455px;
             background-color: rgba(black, .6);
             opacity: 0;
             padding: 1em;
-            border-left: 4px #f9cc41 solid;
+            border-left: 4px #fdb100 solid;
 
             transition: opacity .2s ease-in;
 
-            h2{
+            h2 {
                 color: white;
+                font-size: 5em;
+                text-align: center;
             }
 
-            span{
+            span {
                 color: white;
+                font-size: 1em;
+                text-align: center;
             }
 
         }
 
+        &:active,
         &:hover {
             .overlay {
                 opacity: 1;
             }
 
-            img{
+            img {
                 filter: saturate(5);
                 transform: scale(1.1);
             }
@@ -50,19 +59,22 @@
     }
 }
 
-.circle-button{
-    padding: 1em;
-    border-radius: 2em;
+.circle-button {
+    padding: 2em;
     text-decoration: none;
-    background-color: #f9cc41;
-    color:white;
+    background-color: #fdb100;
+    color: white;
     position: relative;
-    top:2em;
+    top: 5em;
+    left: 25em;
+
+
 
     transition: color .2s, background-color .2s;
 
-    &:hover{
+    &:active,
+    &:hover {
         background-color: white;
-        color: #f9cc41;
+        color: #fdb100;
     }
 }

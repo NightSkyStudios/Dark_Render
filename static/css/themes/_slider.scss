@@ -36,7 +36,8 @@
 				top: 0;
 				left: 0;
 				clip-path: polygon(58% 0, 65% 6%, 94% 6%, 94% 38%, 100% 43%, 100% 100%, 0 100%, 0 0);
-				background: rgb(38, 37, 51);
+				-webkit-clip-path: polygon(58% 0, 65% 6%, 94% 6%, 94% 38%, 100% 43%, 100% 100%, 0 100%, 0 0);
+				background: rgb(0, 0, 0);
 				z-index: -1;
 			}
 
@@ -46,8 +47,9 @@
 				position: absolute;
 				width: 100%;
 				height: 100%;
-				background-color: rgb(38, 37, 51);
+				background-color: rgb(0, 0, 0);
 				clip-path: polygon(58% 0, 65% 6%, 94% 6%, 94% 38%, 100% 43%, 100% 0);
+				-webkit-clip-path: polygon(58% 0, 65% 6%, 94% 6%, 94% 38%, 100% 43%, 100% 0);
 				left: -35px;
 				bottom: -28px;
 				transform: rotate(180deg);
@@ -62,6 +64,7 @@
 				height: 100%;
 				background-color: $primary-color;
 				clip-path: polygon(58% 0, 65% 6%, 94% 6%, 94% 38%, 100% 43%, 100% 0);
+				-webkit-clip-path: polygon(58% 0, 65% 6%, 94% 6%, 94% 38%, 100% 43%, 100% 0);
 				left: 10px;
 				top: -10px;
 				z-index: 1;
@@ -134,9 +137,9 @@
 
 .owl-theme .owl-dots .owl-dot.active span {
 	height: 4px;
-	background: rgb(249, 204, 65);
+	background: rgb(253, 177, 0);
 	border-radius: 3px;
-	box-shadow: 0px 1px 0px rgb(249, 204, 65);
+	box-shadow: 0px 1px 0px rgb(253, 177, 0);
 }
 
 .testimonialCarousel .owl-dots .owl-dot span {

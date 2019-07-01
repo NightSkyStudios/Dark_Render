@@ -3,7 +3,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ project.title }}</title>
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic"
           rel="stylesheet">
@@ -19,14 +22,32 @@
 <body>
 {% include "hamburger.html" %}
 
-<header class="hero-banner bg-cover" style="background-image: url({{ project.image.url }})">
-    <a class="navbar-brand" href="{% url 'index' %}">
-        <img src="{% static 'img/LOGO_FIN.png' %}" alt="">
-    </a>
+<header>
+    <div class="hero">
+        <a class="navbar-brand" href="{% url 'index' %}">
+            <img src="{% static 'img/LOGO_FIN.png' %}" alt="">
+        </a>
+
+        <div class="owl-carousel owl-theme heroCarousel">
+         <div class="item">
+                    <div class="hero__slide">
+                        <img src="{{ project.image.url }}" alt="">
+                    </div>
+                </div>
+             {% for photo in gallery %}
+                <div class="item">
+                    <div class="hero__slide">
+                        <img src="{{ photo.image.url }}" number="{{ forloop.counter }}" alt="">
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        </div>
 </header>
 
 <div class="container my-5">
-    <h2 class="section-intro__subtitle bottom-border">{{ project.title }}</h2>
+    <h2 class="section-intro__subtitle bottom-border" style="text-align: center;">{{ project.title }}</h2>
     <span>
         {{ project.mce_description|safe }}
     </span>
@@ -41,6 +62,29 @@
 <script src="{% static 'vendor/owl-carousel/owl.carousel.min.js' %}"></script>
 
 <script>
+
+     var heroCarousel = $('.heroCarousel');
+    heroCarousel.owlCarousel({
+        center: true,
+        autoplay: true,
+        autoplaySpeed: 5000,
+        animateOut: 'fadeOut',
+        mergeFit: true,
+        loop: true,
+        margin: 10,
+        nav: false,
+        smartSpeed: 450,
+        autoHeight: true,
+        autoWidth: true,
+        startPosition: 1,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1
+            }
+        }
+    });
+
     var dropToggle = $('.menu_right > li').has('ul').children('a');
     dropToggle.on('click', function () {
         dropToggle.not(this).closest('li').find('ul').slideUp(200);

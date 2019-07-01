@@ -5,17 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Contact</title>
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}">
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic"
           rel="stylesheet">
-
     <link rel="stylesheet" href="{% static 'vendor/themify-icons/themify-icons.css' %}">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <link rel="stylesheet" href="{% static 'vendor/owl-carousel/owl.theme.default.min.css' %}">
     <link rel="stylesheet" href="{% static 'vendor/owl-carousel/owl.carousel.min.css' %}">
     <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 
@@ -25,13 +28,16 @@
 
 
 <section class="margin-after-header-small">
-    <div class="contact-container" style="background-image: url({% static "img/hero_1.jpg" %})">
+    <div class="contact-container" style="">
+        <video autoplay muted loop id="video">
+            <source src="{% static "video/timelapse.mp4" %}" type="video/mp4">
+        </video>
         <div class="contact">
             <div class="media contact-info">
                 <span class="contact-info__icon"><i class="fas fa-map"></i></span>
                 <div class="media-body">
                     <h3>Location</h3>
-                    <p>Santa monica bullevard</p>
+                    <p>Lviv, Ukraine</p>
                 </div>
             </div>
             <div class="media contact-info">
@@ -45,7 +51,7 @@
                 <span class="contact-info__icon"><i class="fas fa-envelope"></i></span>
                 <div class="media-body">
                     <h3>Email</h3>
-                    <p>lorem@impsum.dolor</p>
+                    <p>main@dark-render.com</p>
                 </div>
             </div>
             <div class="media contact-info">
@@ -60,7 +66,7 @@
 </section>
 
 
-{% include 'footer.html' %}
+{#{% include 'footer.html' %}#}
 
 
 <script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
@@ -68,16 +74,16 @@
 <script src="{% static 'vendor/owl-carousel/owl.carousel.min.js' %}"></script>
 
 <script>
-    var dropToggle = $('.menu_right > li').has('ul').children('a');
-    dropToggle.on('click', function () {
-        dropToggle.not(this).closest('li').find('ul').slideUp(200);
-        $(this).closest('li').children('ul').slideToggle(200);
-        return false;
-    });
+  var dropToggle = $('.menu_right > li').has('ul').children('a');
+  dropToggle.on('click', function () {
+    dropToggle.not(this).closest('li').find('ul').slideUp(200);
+    $(this).closest('li').children('ul').slideToggle(200);
+    return false;
+  });
 
-    $(".toggle_icon").on('click', function () {
-        $('body').toggleClass("open");
-    });
+  $(".toggle_icon").on('click', function () {
+    $('body').toggleClass("open");
+  });
 </script>
 </body>
 </html>

@@ -55,14 +55,16 @@
             position: relative;
 
             &:after {
-                content: "";
+               content: "";
                 display: block;
                 height: 2px;
                 min-width: 100px;
                 position: absolute;
                 bottom: 0;
-                left: 0;
+                left: 50%;
                 background: $primary-color;
+
+                transform: translateX(-50%);
             }
 
             &.small {

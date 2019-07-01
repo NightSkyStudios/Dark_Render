@@ -14,14 +14,11 @@ def index(request):
 
 
 def about(request):
-    return render(request, 'about.html')
+    partners = Partner.objects.all()
 
+    ctx = {'partners': partners}
+    return render(request, 'about.html', ctx)
 
-def blog(request):
-    posts = Post.objects.all().order_by('-date')
-
-    ctx = {'posts': posts}
-    return render(request, 'blog.html', ctx)
 
 
 def contact(request):
@@ -37,18 +34,11 @@ def projects(request):
 
 def project_page(request, id):
     project = Project.objects.get(pk=id)
+    gallery = Photo.objects.filter(project=project)
 
-    ctx = {'project': project}
+    ctx = {
+        'project': project,
+        'gallery': gallery,
+    }
 
     return render(request, 'project_page.html', ctx)
-
-
-def service(request):
-    return render(request, 'service.html')
-
-
-def blog_post(request,id):
-    post = Post.objects.get(pk=id)
-
-    ctx = {'post': post}
-    return render(request, 'blog-single.html',ctx)

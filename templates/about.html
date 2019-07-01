@@ -5,10 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>About</title>
+
+    <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}">
+
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic"
           rel="stylesheet">
-
     <link rel="stylesheet" href="{% static 'vendor/themify-icons/themify-icons.css' %}">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
@@ -24,29 +27,42 @@
 <section class="margin-after-header-small">
     <div class="topsection">
         <div class="photo-grid">
-            <div class="photo-wraper"><img src="{% static "img/hero_1.jpg" %}" alt=""></div>
-            <div class="photo-wraper"><img src="{% static "img/hero_1.jpg" %}" alt=""></div>
-            <div class="photo-wraper"><img src="{% static "img/hero_1.jpg" %}" alt=""></div>
+            <div class="photo-wraper"><img src="{% static "img/about/2.jpg" %}" alt=""></div>
+            <div class="photo-wraper"><img src="{% static "img/about/3.jpg" %}" alt=""></div>
+            <div class="photo-wraper"><img src="{% static "img/about/1.jpg" %}" alt=""></div>
+            <div class="photo-wraper"><img src="{% static "img/about/4.jpg" %}" alt=""></div>
         </div>
         <div class="description">
-            <h3 class="section-intro__subtitle bottom-border">Words we live by</h3>
+            <h3 class="section-intro__subtitle bottom-border">WHO WE ARE</h3>
             <span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi beatae cupiditate eius eum eveniet
-                expedita maiores non nulla odio, omnis possimus quam, saepe sint tempora temporibus totam unde ut
-                veritatis.
+                Founded by : Orest Moskal
+                <br>
+                <br>
+                Based in Lviv, Working Globally
+                <br>
+                   <br>
+                Partnered international architectures we work on a global scale from USE to Asia.
+                <br>
+                    <br>
+                DARK RENDER is based in the beautiful city of Lviv, where historical buildings hide a buzzing party, food and art scene.The DARK RENDER team is comprised of a diverse and skillful group of professionals who hail from over 4 different countries. This core team is constantly growing and evolving - both to expand our pool of talented artists and to grow our available capacity for our Clients.
+                <br>
+                <br>
+                Team,talented professionals working behind the scenes.
             </span>
         </div>
     </div>
     <div class="partners">
         <h3 class="section-intro__subtitle bottom-border-center">Partners</h3>
-        <span>Lorem benis dolor denis namet</span>
+        <span>PARTNERS CONFIDE US</span>
         <div class="partners-grid">
-            <img src="{% static "img/LOGO_FIN.png" %}" alt="">
-            <img src="{% static "img/LOGO_FIN.png" %}" alt="">
-            <img src="{% static "img/LOGO_FIN.png" %}" alt="">
-            <img src="{% static "img/LOGO_FIN.png" %}" alt="">
-            <img src="{% static "img/LOGO_FIN.png" %}" alt="">
-            <img src="{% static "img/LOGO_FIN.png" %}" alt="">
+            {% for item in partners %}
+                <div class="partners-grid-wraper">
+                    <a href="{{ item.link }}">
+                        <img class="partners-grid-item" src="{{ item.image.url }}" alt="">
+                    </a>
+                </div>
+
+            {% endfor %}
         </div>
     </div>
 </section>

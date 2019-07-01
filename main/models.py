@@ -1,6 +1,11 @@
 from datetime import datetime
 from django.db import models
+<<<<<<< HEAD
 from tinymce.models import HTMLField
+=======
+from django.db.models.signals import post_delete
+from django.dispatch import receiver
+>>>>>>> baa8dd832a1319cbfc64751e1af1ef06cfec605e
 
 
 class Slider(models.Model):
@@ -44,26 +49,40 @@ class Project(models.Model):
         verbose_name_plural = 'Проекти'
 
 
-class Post(models.Model):
+
+class Partner(models.Model):
+    name = models.CharField('Назва',
+                            max_length=125,
+                            help_text='Назва')
     image = models.ImageField('Зображення',
-                              upload_to='img/blog',
+                              upload_to='img/partners',
                               null=True,
                               blank=True)
-    title = models.CharField('Заголовок',
-                             max_length=225,
-                             help_text='Заголовок статті')
-    text = models.TextField('Текст',
-                            help_text='Текст статті')
-    author = models.CharField('Автор',
-                              max_length=125,
-                              help_text='Автор')
-    date = models.DateTimeField('Дата публікації статті',
-                                default=datetime.now,
-                                blank=True)
+    link = models.URLField('Посилання',
+                           null=True,
+                           blank=True,
+                           default='#')
 
     def __str__(self):
-        return self.title
+        return self.name
 
     class Meta:
-        verbose_name = 'Стаття Блогу'
-        verbose_name_plural = 'Статті Блогу'
+        verbose_name = 'Партнер'
+        verbose_name_plural = 'Партнери'
+
+
+class Photo(models.Model):
+    image = models.ImageField('Зображення',
+                              upload_to='img',
+                              null=True,
+                              blank=True,
+                              help_text='Зображення буде відображатись на слайдері головної сторінки')
+    project = models.ForeignKey(Project, on_delete=models.CASCADE)
+
+
+@receiver(post_delete)
+def submission_delete(sender, instance, **kwargs):
+    try:
+        instance.image.delete(False)
+    except AttributeError:
+        pass
