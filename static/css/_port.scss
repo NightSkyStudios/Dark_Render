@@ -59,16 +59,15 @@
     }
 }
 
-.circle-button {
+.sq-button {
     padding: 2em;
     text-decoration: none;
     background-color: #fdb100;
     color: white;
-    position: relative;
-    top: 5em;
-    left: 25em;
-
-
+    position: absolute;
+    bottom: 2em;
+    left: 50%;
+    transform: translateX(-50%);
 
     transition: color .2s, background-color .2s;
 
