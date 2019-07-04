@@ -46,7 +46,7 @@
             <h2>{{ item.title }}</h2>
             <span>{{ item.short_description|truncatechars:32 }}</span>
             <br>
-            <a href="{% url "project_page" item.pk  %}" class="circle-button"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
+            <a href="{% url "project_page" item.pk  %}" class="sq-button"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
         </div>
     </div>
     {% endfor %}
