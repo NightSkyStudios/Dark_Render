@@ -44,11 +44,7 @@
         <img  src="{{ item.image.url }}" alt="">
         <div onclick="" class="overlay">
             <h2>{{ item.title }}</h2>
-<<<<<<< HEAD
             <span>{{ item.short_description|truncatechars:32 }}</span>
-=======
-            <span>{{ item.description|truncatewords:10 }}</span>
->>>>>>> baa8dd832a1319cbfc64751e1af1ef06cfec605e
             <br>
             <a href="{% url "project_page" item.pk  %}" class="circle-button"><i class="fa fa-ellipsis-h" aria-hidden="true"></i></a>
         </div>

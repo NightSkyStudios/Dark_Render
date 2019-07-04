@@ -11,7 +11,6 @@ urlpatterns = [
     path('contact/', contact, name='contact'),
     path('projects/', projects, name='projects'),
     path('project_page/<id>', project_page, name='project_page'),
-    path('blog-post/<id>', blog_post, name='blog_post'),
     path(r'tinymce/', include('tinymce.urls')),
 ]
 

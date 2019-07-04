@@ -1,11 +1,8 @@
 from datetime import datetime
 from django.db import models
-<<<<<<< HEAD
 from tinymce.models import HTMLField
-=======
 from django.db.models.signals import post_delete
 from django.dispatch import receiver
->>>>>>> baa8dd832a1319cbfc64751e1af1ef06cfec605e
 
 
 class Slider(models.Model):
