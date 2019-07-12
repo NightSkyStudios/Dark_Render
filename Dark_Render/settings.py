@@ -11,11 +11,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'g=ls0putsdcq(8ts3%e()9o&0vrx)g@!!hijnauf#9n!(s!21v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-PREPEND_WWW = False
-BASE_URL = "https://dark-render.com"
+DEBUG = True
+#PREPEND_WWW = False
+# BASE_URL = "https://dark-render.com"
 
-ALLOWED_HOSTS = ['https://dark-render.com','https://www.dark-render.com','www.dark-render.com','dark-render.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -38,15 +38,17 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+'''
 CSRF_COOKIE_SECURE = True
 X_FRAME_OPTIONS = "DENY"
 SESSION_COOKIE_SECURE = True
-SECURE_SSL_REDIRECT = True
+# SECURE_SSL_REDIRECT = True
 SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
+'''
 
 ROOT_URLCONF = 'Dark_Render.urls'
 
@@ -129,8 +131,8 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = '/home3/darkrend/public_html/media'
-
+# MEDIA_ROOT = '/home3/darkrend/public_html/media'
+MEDIA_ROOT = 'media'
 
 # TinyMCE
 TINYMCE_JS_URL = os.path.join("", "js/tinymce/tinymce.min.js")
