@@ -8,12 +8,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'i!i+237c(mly42u#!7!_g4a^jz#@%k85w#--d12luxqh*i_tg$'
+SECRET_KEY = 'g=ls0putsdcq(8ts3%e()9o&0vrx)g@!!hijnauf#9n!(s!21v'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+PREPEND_WWW = False
+BASE_URL = "https://dark-render.com"
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://dark-render.com','https://www.dark-render.com','www.dark-render.com','dark-render.com']
 
 
 # Application definition
@@ -38,6 +40,13 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+CSRF_COOKIE_SECURE = True
+X_FRAME_OPTIONS = "DENY"
+SESSION_COOKIE_SECURE = True
+SECURE_SSL_REDIRECT = True
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
 
 ROOT_URLCONF = 'Dark_Render.urls'
 
@@ -114,13 +123,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = '/home3/darkrend/public_html/static'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
 
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = '/home3/darkrend/public_html/media'
+
 
 # TinyMCE
 TINYMCE_JS_URL = os.path.join("", "js/tinymce/tinymce.min.js")
@@ -153,3 +163,4 @@ TINYMCE_DEFAULT_CONFIG = {
     'menubar': True,
     'statusbar': True,
 }
+
