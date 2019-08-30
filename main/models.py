@@ -37,6 +37,11 @@ class Project(models.Model):
     short_description = models.CharField(max_length=128)
     mce_description = HTMLField('Опис',
                             help_text='Опис проекта')
+    category = models.CharField(max_length=2,
+                                choices=[('IT','Interior'),
+                                         ('EX', 'Exterior'),
+                                         ('FR', 'Furniture')],
+                                default='IT')
 
     def __str__(self):
         return self.title
