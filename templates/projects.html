@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -44,11 +43,11 @@
         <input checked name="radio-switch" id="chbx-all" type="radio" href="" class="checkbox-switch">
         <label data-filter="*" onclick="filter(this)" for="chbx-all" class="btn">All</label>
         <input name="radio-switch" id="chbx-interior" type="radio" href="" class="checkbox-switch">
-        <label data-filter="IT" onclick="filter(this)" for="chbx-interior" class="btn">Interior</label>
+        <label data-filter=".IT" onclick="filter(this)" for="chbx-interior" class="btn">Interior</label>
         <input name="radio-switch" id="chbx-exterior" type="radio" href="" class="checkbox-switch">
-        <label data-filter="EX" onclick="filter(this)" for="chbx-exterior" class="btn">Exterior</label>
+        <label data-filter=".EX" onclick="filter(this)" for="chbx-exterior" class="btn">Exterior</label>
         <input name="radio-switch" id="chbx-furniture" type="radio" href="" class="checkbox-switch">
-        <label data-filter="FR" onclick="filter(this)" for="chbx-furniture" class="btn">Furniture</label>
+        <label data-filter=".FR" onclick="filter(this)" for="chbx-furniture" class="btn">Furniture</label>
     </div>
 </header>
 
@@ -60,8 +59,7 @@
                 <h2>{{ item.title }}</h2>
                 <span>{{ item.short_description|truncatechars:32 }}</span>
                 <br>
-                <a href="{% url "project_page" item.pk %}" class="sq-button"><i class="fa fa-ellipsis-h"
-                                                                                aria-hidden="true"></i></a>
+                <a href="{% url "project_page" item.pk %}" class="sq-button"></a>
             </div>
         </div>
     {% endfor %}
@@ -92,12 +90,12 @@
     //   for an individual element
     var iso = new Isotope('.portfolio-grid', {
         itemSelector: '.portfolio-item',
-        layoutMode: 'cellsByColumn',
+        layoutMode: 'masonry',
     });
 
     function filter(e) {
         iso.arrange({
-            filter: '.' + e.getAttribute('data-filter')
+            filter: e.getAttribute('data-filter')
         })
     }
 </script>
