@@ -51,7 +51,13 @@
         grid-template-columns: 1fr 1fr;
         grid-gap: 1em;
         grid-auto-rows: 1fr;
-        grid-area: photos;
+        max-width: 500px;
+        margin: auto;
+
+        .align-fix {
+            width: 100%;
+            grid-area: photos;
+        }
 
         .photo-wraper {
             position: relative;
@@ -64,6 +70,7 @@
                 padding-top: 100%; /* initial ratio of 1:1*/
             }
         }
+
 
         img {
             display: block;
@@ -81,10 +88,27 @@
     }
 
     .description {
-        padding: 3em;
+        // padding: 3em;
         grid-area: description;
 
+        .flx-items {
+            display: flex;
+            max-width: 100%;
+            justify-content: space-evenly;
+            margin: 1em 0 1em 0;
+
+            .flx-wraper {
+                width:20%;
+
+                img {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+
     }
+
 }
 
 .partners {

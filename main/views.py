@@ -28,7 +28,18 @@ def contact(request):
 def projects(request):
     projects = Project.objects.all()
 
-    ctx = {'projects': projects}
+    filter = None
+    try:
+        filter = request.GET['filter']
+    except:
+        ...
+
+    if not filter:
+        filter = 'ALL'
+
+    ctx = {'projects': projects,
+           'filter': filter}
+
     return render(request, 'projects.html', ctx)
 
 

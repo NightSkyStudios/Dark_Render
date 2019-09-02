@@ -1,0 +1,10 @@
+.img-absolute{
+    position: absolute;
+    top:0;
+
+    transition: opacity .3s;
+
+    &:hover{
+        opacity: 0;
+    }
+}

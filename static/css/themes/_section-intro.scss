@@ -55,7 +55,7 @@
             position: relative;
 
             &:after {
-               content: "";
+                content: "";
                 display: block;
                 height: 2px;
                 min-width: 100px;
@@ -65,6 +65,26 @@
                 background: $primary-color;
 
                 transform: translateX(-50%);
+            }
+
+            &.small {
+                font-size: 2rem;
+            }
+        }
+
+        &.bottom-border-left {
+            padding-bottom: 30px;
+            // margin-bottom: 50px;
+            position: relative;
+
+            &:after {
+                content: "";
+                display: block;
+                height: 2px;
+                min-width: 100px;
+                position: absolute;
+                bottom: 0;
+                background: $primary-color;
             }
 
             &.small {

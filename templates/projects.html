@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <script src="{% static 'js/isotope.pkgd.js' %}"></script>
+    <script src="{% static 'js/imagesloaded.pkgd.js' %}"></script>
 </head>
 <body>
 {% include 'hamburger.html' %}
@@ -40,14 +41,14 @@
 
     <h3 class="text-center section-intro__subtitle">Categories</h3>
     <div class="categories align-center">
-        <input checked name="radio-switch" id="chbx-all" type="radio" href="" class="checkbox-switch">
-        <label data-filter="*" onclick="filter(this)" for="chbx-all" class="btn">All</label>
-        <input name="radio-switch" id="chbx-interior" type="radio" href="" class="checkbox-switch">
-        <label data-filter=".IT" onclick="filter(this)" for="chbx-interior" class="btn">Interior</label>
-        <input name="radio-switch" id="chbx-exterior" type="radio" href="" class="checkbox-switch">
-        <label data-filter=".EX" onclick="filter(this)" for="chbx-exterior" class="btn">Exterior</label>
-        <input name="radio-switch" id="chbx-furniture" type="radio" href="" class="checkbox-switch">
-        <label data-filter=".FR" onclick="filter(this)" for="chbx-furniture" class="btn">Furniture</label>
+        <input {% if filter == 'ALL' %}checked{% endif %} name="radio-switch" id="chbx-all" type="radio" href="" class="checkbox-switch">
+        <label data-filter="*" onclick="filter(this.getAttribute('data-filter'))" for="chbx-all" class="btn btn-label">All</label>
+        <input {% if filter == 'IT' %}checked{% endif %} name="radio-switch" id="chbx-interior" type="radio" href="" class="checkbox-switch">
+        <label data-filter=".IT" onclick="filter(this.getAttribute('data-filter'))" for="chbx-interior" class="btn btn-label">Interior</label>
+        <input {% if filter == 'EX' %}checked{% endif %} name="radio-switch" id="chbx-exterior" type="radio" href="" class="checkbox-switch">
+        <label data-filter=".EX" onclick="filter(this.getAttribute('data-filter'))" for="chbx-exterior" class="btn btn-label">Exterior</label>
+        <input {% if filter == 'FR' %}checked{% endif %} name="radio-switch" id="chbx-furniture" type="radio" href="" class="checkbox-switch">
+        <label data-filter=".FR" onclick="filter(this.getAttribute('data-filter'))" for="chbx-furniture" class="btn btn-label">Furniture</label>
     </div>
 </header>
 
@@ -88,16 +89,26 @@
 
     // element argument can be a selector string
     //   for an individual element
-    var iso = new Isotope('.portfolio-grid', {
+    let grid = document.querySelector('.portfolio-grid');
+
+    var iso = new Isotope(grid, {
         itemSelector: '.portfolio-item',
         layoutMode: 'masonry',
     });
 
-    function filter(e) {
+    function filter(attr) {
         iso.arrange({
-            filter: e.getAttribute('data-filter')
+            filter: attr
         })
     }
+
+    imagesLoaded(grid).on('progress', function () {
+        // layout Isotope after each image loads
+        iso.layout();
+    });
+
+    filter('.{{ filter }}')
+
 </script>
 </body>
 </html>

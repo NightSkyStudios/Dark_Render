@@ -138,6 +138,8 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 if not DEBUG:
     MEDIA_ROOT = '/home3/darkrend/public_html/media'
+else:
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 # TinyMCE

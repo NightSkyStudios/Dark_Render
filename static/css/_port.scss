@@ -71,12 +71,12 @@
 
 .categories {
     display: inline-flex;
-    justify-content: space-evenly;
-    position: absolute;
+    justify-content: center;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
-
-
+    max-width: 80%;
+    flex-wrap: wrap;
 }
 
 .sq-button {
@@ -97,6 +97,12 @@
         background-color: white;
         color: #fdb100;
     }
+}
+
+.btn-label{
+    margin:0;
+    width: 50%;
+    width: 128px;
 }
 
 .checkbox-switch {
