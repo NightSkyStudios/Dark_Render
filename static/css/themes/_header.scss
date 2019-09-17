@@ -123,7 +123,7 @@
 	@include transition();
 	opacity: .95;
 	@media (max-width: 575px) {
-		max-width: 75%;
+		max-width: 40%;
 		right: -75%;
 	}
 	.input-group {

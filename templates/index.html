@@ -98,7 +98,7 @@
                     <span class="overview__single__icon"><i class="ti-user"></i></span>
                     <div class="media-body">
                         <h3>4</h3>
-                        <p>Team members</p>
+                        <p>Team leads</p>
                     </div>
                 </div>
             </div>
@@ -116,8 +116,8 @@
 
         <div class="row align-items-center">
             <div class="col-md-6 mb-4 mb-md-0 px-0">
-                <div class="portfolio__img">
-                    <a href="{% url 'projects' %}">
+                <div onclick="" class="portfolio__img">
+                    <a href="{% url 'projects' %}?filter=EX">
                         <img class="img-fluid" src="{% static 'img/index/1.jpg' %}" alt=""> {# TODO:change #}
                         <img class="img-fluid img-absolute" src="{% static 'img/index/3.jpg' %}" alt="">
                     </a>
@@ -128,7 +128,6 @@
                 <h2 class="section-intro__subtitle small">Exterior visualization </h2>
                 <p style="margin-bottom: 0;">We model full detailed building in 3D, our artists will create atmospheric
                     photo realistic images, to your liking</p>
-
             </div>
         </div>
 
@@ -143,8 +142,8 @@
 
             </div>
             <div class="col-md-6 mb-4 mb-md-0 order-1 order-md-2 px-0">
-                <div class="portfolio__img">
-                    <a href="{% url 'projects' %}">
+                <div onclick="" class="portfolio__img">
+                    <a href="{% url 'projects' %}?filter=FR">
                         <img class="img-fluid" src="{% static 'img/index/3.jpg' %}" alt=""> {# TODO:change #}
                         <img class="img-fluid img-absolute" src="{% static 'img/index/2.jpg' %}" alt="">
                     </a>
@@ -153,8 +152,8 @@
         </div>
         <div class="row align-items-center">
             <div class="col-md-6 mb-4 mb-md-0 px-0">
-                <div class="portfolio__img">
-                    <a href="{% url 'projects' %}">
+                <div  onclick="" class="portfolio__img">
+                    <a href="{% url 'projects' %}?filter=IT">
                         <img class="img-fluid" src="{% static 'img/index/2.jpg' %}" alt=""> {# TODO:change #}
                         <img class="img-fluid img-absolute" src="{% static 'img/index/1.jpg' %}" alt="">
                     </a>

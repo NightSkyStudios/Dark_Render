@@ -35,7 +35,7 @@ def projects(request):
         ...
 
     if not filter:
-        filter = 'ALL'
+        filter = '*'
 
     ctx = {'projects': projects,
            'filter': filter}

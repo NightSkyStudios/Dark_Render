@@ -41,7 +41,7 @@
 
     <h3 class="text-center section-intro__subtitle">Categories</h3>
     <div class="categories align-center">
-        <input {% if filter == 'ALL' %}checked{% endif %} name="radio-switch" id="chbx-all" type="radio" href="" class="checkbox-switch">
+        <input {% if filter == '*' %}checked{% endif %} name="radio-switch" id="chbx-all" type="radio" href="" class="checkbox-switch">
         <label data-filter="*" onclick="filter(this.getAttribute('data-filter'))" for="chbx-all" class="btn btn-label">All</label>
         <input {% if filter == 'IT' %}checked{% endif %} name="radio-switch" id="chbx-interior" type="radio" href="" class="checkbox-switch">
         <label data-filter=".IT" onclick="filter(this.getAttribute('data-filter'))" for="chbx-interior" class="btn btn-label">Interior</label>
@@ -55,12 +55,12 @@
 <div class="portfolio-grid">
     {% for item in projects %}
         <div class="portfolio-item {{ item.category }}">
-            <img src="{{ item.image.url }}" alt="">
+            <img class="portfolio-image" src="{{ item.image.url }}" alt="">
             <div onclick="" class="overlay">
                 <h2>{{ item.title }}</h2>
                 <span>{{ item.short_description|truncatechars:32 }}</span>
                 <br>
-                <a href="{% url "project_page" item.pk %}" class="sq-button"></a>
+                <a href="{% url "project_page" item.pk %}" class="sq-button"><img class="svg" src="{% static "img/info-solid.svg" %}" alt=""></a>
             </div>
         </div>
     {% endfor %}
