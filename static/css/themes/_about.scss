@@ -94,7 +94,7 @@
         .flx-items {
             display: flex;
             max-width: 100%;
-            justify-content: space-evenly;
+            justify-content: space-between;
             margin: 1em 0 1em 0;
 
             .flx-wraper {
@@ -103,7 +103,7 @@
                 img {
                     display: block;
                     width: 100%;
-                    max-width: 200px;
+                    max-width: 150px;
                 }
             }
         }
