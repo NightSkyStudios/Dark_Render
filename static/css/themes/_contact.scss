@@ -1,66 +1,138 @@
-.contact {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 1000px;
-
-    @media screen and (max-width: 1000px) {
-        width: 500px;
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media screen and (max-width: 500px) {
-        width: 250px;
-        grid-template-columns: 1fr;
-    }
-
-    &-info {
-        background-color: $bodyBg;
-        padding: 1em;
-        width: 250px;
-        line-height: 1px;
-
-        &__icon {
-            margin-right: 20px;
-
-            i,
-            span {
-                font-size: 40px;
-                color: $primary-color;
-            }
-        }
-
-        h3 {
-            font-size: 1rem;
-            font-weight: 300;
-            color: $primary-color;
-
-            a {
-                color: $primary-color;
-            }
-        }
-
-        p{
-            margin-bottom: 0;
-        }
-    }
-}
-
 .contact-container {
-    background-size: cover;
-    height: 80vh;
+	background-size: cover;
+	height: 80vh;
 
-    video {
-    position: fixed;
-    left: 50vw;
-    top: 50vh;
-    min-width: 100%;
-    min-height: 100%;
-    transform: translate(-50%, -50%);
-}
+	.contact-center {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		position: absolute;
+	}
+
+	video {
+		position: fixed;
+		left: 50vw;
+		top: 50vh;
+		min-width: 100%;
+		min-height: 100%;
+		transform: translate(-50%, -50%);
+	}
+
+	.contact {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		//position: absolute;
+
+		@media screen and (max-width: 1000px) {
+			width: 500px;
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media screen and (max-width: 500px) {
+			width: 250px;
+			grid-template-columns: 1fr;
+		}
+
+		&-info {
+			background-color: $bodyBg;
+			padding: 1em;
+			width: 250px;
+			line-height: 1px;
+
+			&__icon {
+				margin-right: 20px;
+
+				i,
+				span {
+					font-size: 40px;
+					color: $primary-color;
+				}
+			}
+
+			h3 {
+				font-size: 1rem;
+				font-weight: 300;
+				color: $primary-color;
+
+				a {
+					color: $primary-color;
+				}
+			}
+
+			p {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.contact-form {
+		width: 1000px;
+		background: black;
+		padding: 1em;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+
+		@media screen and (max-width: 1000px) {
+			width: 500px;
+		}
+
+		@media screen and (max-width: 500px) {
+			width: 250px;
+		}
+
+		label {
+			display: block;
+			font-size: 1.5em;
+		}
+
+		input[type="text"] {
+			display: block;
+			color: black;
+			background: black;
+			border: white solid 2px;
+			transition: border-color .3s, background-color .3s;
+			width: 100%;
+			max-width: 100%;
+			padding: 0.3em 0.5em;
+			font-size: 1.25em;
+			//margin: 0 auto;
+
+			&:focus {
+				border-color: $primary-color;
+				outline: none;
+				background: white;
+			}
+
+			&::placeholder {
+				color: grey;
+			}
+		}
+
+		textarea {
+			resize: none;
+			display: block;
+			color: black;
+			background: black;
+			border: white solid 2px;
+			transition: border-color .3s, background-color .3s;
+			width: 100%;
+			max-width: 100%;
+			padding: 0.3em 0.5em;
+			font-size: 1.25em;
+			//margin: 0 auto;
+
+			&:focus {
+				border-color: $primary-color;
+				outline: none;
+				background: white;
+			}
+
+			&::placeholder {
+				color: grey;
+			}
+		}
+	}
 
 }
 

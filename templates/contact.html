@@ -7,10 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta property="og:site_name" content="Dark Render"/>
     <meta property="og:title" content="DARK-RENDER is a creative studio that produces high-end visualizations. "/>
-    <meta property="og:description" content="DARK RENDER is based in the beautiful city of Lviv, where historical buildings hide a buzzing party, food and art scene.The DARK RENDER team is comprised of a diverse and skillful group of professionals who hail from over 4 different countries."/>
+    <meta property="og:description"
+          content="DARK RENDER is based in the beautiful city of Lviv, where historical buildings hide a buzzing party, food and art scene.The DARK RENDER team is comprised of a diverse and skillful group of professionals who hail from over 4 different countries."/>
     <meta property="og:url" content="https://dark-render.com/">
     <meta property="og:type" content="art-studio"/>
-    <meta property="og:image" content="{% static 'img/index/portret.png' %}">>
+    <meta property="og:image" content="{% static 'img/index/portret.png' %}">
+    >
 
     <title>Contact</title>
 
@@ -38,34 +40,48 @@
         <video autoplay muted loop id="video">
             <source src="{% static "video/timelapse.mp4" %}" type="video/mp4">
         </video>
-        <div class="contact">
-            <div class="media contact-info">
-                <span class="contact-info__icon"><i class="fas fa-map"></i></span>
-                <div class="media-body">
-                    <h3>Location</h3>
-                    <p>Lviv, Ukraine</p>
+        <div class="contact-center">
+            <div class="contact">
+                <div class="media contact-info">
+                    <span class="contact-info__icon"><i class="fas fa-map"></i></span>
+                    <div class="media-body">
+                        <h3>Location</h3>
+                        <p>Lviv, Ukraine</p>
+                    </div>
+                </div>
+                <div class="media contact-info">
+                    <span class="contact-info__icon"><i class="fas fa-mobile-alt"></i></span>
+                    <div class="media-body">
+                        <h3>Number</h3>
+                        <p>+358554544554454</p>
+                    </div>
+                </div>
+                <div class="media contact-info">
+                    <span class="contact-info__icon"><i class="fas fa-envelope"></i></span>
+                    <div class="media-body">
+                        <h3>Email</h3>
+                        <p>main@dark-render.com</p>
+                    </div>
+                </div>
+                <div class="media contact-info">
+                    <span class="contact-info__icon"><i class="fab fa-skype"></i></span>
+                    <div class="media-body">
+                        <h3>Skype</h3>
+                        <p>lorem.ipsum</p>
+                    </div>
                 </div>
             </div>
-            <div class="media contact-info">
-                <span class="contact-info__icon"><i class="fas fa-mobile-alt"></i></span>
-                <div class="media-body">
-                    <h3>Number</h3>
-                    <p>+358554544554454</p>
-                </div>
-            </div>
-            <div class="media contact-info">
-                <span class="contact-info__icon"><i class="fas fa-envelope"></i></span>
-                <div class="media-body">
-                    <h3>Email</h3>
-                    <p>main@dark-render.com</p>
-                </div>
-            </div>
-            <div class="media contact-info">
-                <span class="contact-info__icon"><i class="fab fa-skype"></i></span>
-                <div class="media-body">
-                    <h3>Skype</h3>
-                    <p>lorem.ipsum</p>
-                </div>
+            <div class="text-center contact-form">
+                <h2 class="section-intro__subtitle bottom-border align-items-center">Or contact us right now</h2>
+                <form method="post">
+                    <label for="email">E-mail</label>
+                    <input placeholder="MagicPeople@example.com" name="email" id="email" type="text"><br>
+                    <label for="name">Your Name</label>
+                    <input placeholder="Firstname Surnamesky" name="name" id="name" type="text"><br>
+                    <label for="message">What you want to say?</label>
+                    <textarea rows="5" name="message" id="message" type="text"></textarea><br>
+                    <button class="btn btn--rightBorder btn--leftBorder" type="submit">Submit</button>
+                </form>
             </div>
         </div>
     </div>
@@ -80,16 +96,16 @@
 <script src="{% static 'vendor/owl-carousel/owl.carousel.min.js' %}"></script>
 
 <script>
-  var dropToggle = $('.menu_right > li').has('ul').children('a');
-  dropToggle.on('click', function () {
-    dropToggle.not(this).closest('li').find('ul').slideUp(200);
-    $(this).closest('li').children('ul').slideToggle(200);
-    return false;
-  });
+    var dropToggle = $('.menu_right > li').has('ul').children('a');
+    dropToggle.on('click', function () {
+        dropToggle.not(this).closest('li').find('ul').slideUp(200);
+        $(this).closest('li').children('ul').slideToggle(200);
+        return false;
+    });
 
-  $(".toggle_icon").on('click', function () {
-    $('body').toggleClass("open");
-  });
+    $(".toggle_icon").on('click', function () {
+        $('body').toggleClass("open");
+    });
 </script>
 </body>
 </html>
