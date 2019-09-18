@@ -1,8 +1,21 @@
 from django.shortcuts import render
 from .models import *
+from django.core.mail import send_mail, BadHeaderError
 
 
 # Create your views here.
+
+def send_mail():
+    if request.method == 'POST':
+        fname = request.POST.get('name', '')
+        number = request.POST.get('number', '')
+        subject = request.POST.get('org', '')
+        message = request.POST.get('text', '')
+        from_email = request.POST.get('email', '')
+        messages = 'Name: {}\nNumber: {}\n\n{} \n\nFrom: {}\n\n\n\nSend From ecad.energy'.format(fname, number, message,
+                                                                                                 from_email)
+        send_mail(subject, messages, 'noreply@ecad.energy', ['office@ecad.energy'],
+                  fail_silently=False)
 
 
 def index(request):

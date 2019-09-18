@@ -174,3 +174,11 @@ TINYMCE_DEFAULT_CONFIG = {
     'statusbar': True,
 }
 
+# EMAIL config
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_USE_SSL = True
+EMAIL_HOST = 'dark-render.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'noreply@dark-render.com'
+EMAIL_HOST_PASSWORD = '**********'
