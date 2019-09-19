@@ -27,7 +27,6 @@
             transition: filter .2s, transform .2s;
         }
 
-
         .overlay {
             position: relative;
             top: -455px;
@@ -80,7 +79,6 @@
 }
 
 .sq-button {
-    padding: 2em;
     text-decoration: none;
     background-color: #fdb100;
     color: white;
@@ -89,6 +87,13 @@
     right: 25px;
     width: 75px;
     height: 75px;
+
+    text-align: center;
+    display: block;
+    vertical-align: middle;
+    line-height: 75px;
+
+
     //transform: translateX(-50%);
 
     transition: color .2s, background-color .2s;
@@ -110,32 +115,40 @@
     }
 }
 
-.btn-label {
-    margin: 0;
-    width: 50%;
-    width: 128px;
-}
-
-.checkbox-switch {
-
-    display: none;
-
-    &:checked + label {
-        background: $primary-color;
-        border-color: $primary-color;
-        color: $charade;
-    }
-}
-
-.radio-all:checked ~ .portfolio-item {
-    opacity: 0.5;
-}
-
-.tiny-fix {
-    display: block;
+.project-page-tiny-container {
 
     img {
-        max-width: 100%;
+        max-width: 90%;
         height: auto;
+    }
+
+    .btn-label {
+        margin: 0;
+        width: 50%;
+        width: 128px;
+    }
+
+    .checkbox-switch {
+
+        display: none;
+
+        &:checked + label {
+            background: $primary-color;
+            border-color: $primary-color;
+            color: $charade;
+        }
+    }
+
+    .radio-all:checked ~ .portfolio-item {
+        opacity: 0.5;
+    }
+
+    .tiny-fix {
+        display: block;
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
     }
 }

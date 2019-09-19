@@ -72,14 +72,16 @@
                 </div>
             </div>
             <div class="text-center contact-form">
-                <h2 class="section-intro__subtitle bottom-border align-items-center">Or contact us right now</h2>
+                <h2 class="section-intro__subtitle bottom-border align-items-center fs-2">Or contact us right now</h2>
+                <span class="section-intro__title mb-5 d-block">Dark-Render is based in Lviv. We collaborate with architects, designers and real estate agencies around the world. We speak English, Russian . Contact us to book our services or to ask any questions, we will be very happy to hear from you!</span>
                 <form method="post">
+                    {% csrf_token %}
                     <label for="email">E-mail</label>
-                    <input placeholder="MagicPeople@example.com" name="email" id="email" type="text"><br>
+                    <input required placeholder="MagicPeople@example.com" name="email" id="email" type="email"><br>
                     <label for="name">Your Name</label>
-                    <input placeholder="Firstname Surnamesky" name="name" id="name" type="text"><br>
+                    <input required placeholder="Firstname Surnamesky" name="name" id="name" type="text"><br>
                     <label for="message">What you want to say?</label>
-                    <textarea rows="5" name="message" id="message" type="text"></textarea><br>
+                    <textarea required placeholder="Your message here" rows="5" name="message" id="message" type="text"></textarea><br>
                     <button class="btn btn--rightBorder btn--leftBorder" type="submit">Submit</button>
                 </form>
             </div>

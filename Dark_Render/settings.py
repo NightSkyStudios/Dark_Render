@@ -23,6 +23,7 @@ else:
     ALLOWED_HOSTS = ['https://dark-render.com','https://www.dark-render.com','www.dark-render.com','dark-render.com']
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -43,7 +44,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 if not DEBUG:
@@ -53,6 +54,7 @@ if not DEBUG:
     SECURE_SSL_REDIRECT = True
     SECURE_BROWSER_XSS_FILTER = True
     SECURE_CONTENT_TYPE_NOSNIFF = True
+
 
 ROOT_URLCONF = 'Dark_Render.urls'
 
@@ -139,8 +141,7 @@ MEDIA_URL = '/media/'
 if not DEBUG:
     MEDIA_ROOT = '/home3/darkrend/public_html/media'
 else:
-    MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
+    MEDIA_ROOT = os.path.join(BASE_DIR, 'img')
 
 # TinyMCE
 TINYMCE_JS_URL = os.path.join("", "js/tinymce/tinymce.min.js")
