@@ -17,6 +17,12 @@ class Slider(models.Model):
     description = models.TextField('Опис',
                                    max_length=125,
                                    help_text='Текст для бокса в коробці')
+    category = models.CharField('Категорія (Для переходу по посиланнях)',
+                                max_length=2,
+                                choices=[('IT', 'Interior'),
+                                         ('EX', 'Exterior'),
+                                         ('FR', 'Furniture')],
+                                default='IT')
 
     def __str__(self):
         return self.title
@@ -36,9 +42,9 @@ class Project(models.Model):
                              help_text='Заголовок проекта')
     short_description = models.CharField(max_length=128)
     mce_description = HTMLField('Опис',
-                            help_text='Опис проекта')
+                                help_text='Опис проекта')
     category = models.CharField(max_length=2,
-                                choices=[('IT','Interior'),
+                                choices=[('IT', 'Interior'),
                                          ('EX', 'Exterior'),
                                          ('FR', 'Furniture')],
                                 default='IT')
@@ -49,7 +55,6 @@ class Project(models.Model):
     class Meta:
         verbose_name = 'Проект'
         verbose_name_plural = 'Проекти'
-
 
 
 class Partner(models.Model):

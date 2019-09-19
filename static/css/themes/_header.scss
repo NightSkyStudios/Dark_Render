@@ -116,14 +116,14 @@
 	height: 100%;
 	background: $charade;
 	width: 100%;
-	max-width: 29%;
+	max-width: 20%;
 	text-align: center;
 	padding-left: 20px;
 	padding-right: 20px;
 	@include transition();
 	opacity: .95;
 	@media (max-width: 575px) {
-		max-width: 75%;
+		max-width: 40%;
 		right: -75%;
 	}
 	.input-group {

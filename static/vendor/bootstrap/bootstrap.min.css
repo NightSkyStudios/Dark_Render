@@ -449,6 +449,10 @@ hr {
     height: auto
 }
 
+.img-absolute{
+
+}
+
 .img-thumbnail {
     padding: .25rem;
     background-color: #fff;
