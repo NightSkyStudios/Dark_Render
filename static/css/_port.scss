@@ -90,7 +90,6 @@
 }
 
 .sq-button {
-    padding: 2em;
     text-decoration: none;
     background-color: #fdb100;
     color: white;
@@ -99,6 +98,12 @@
     right: 25px;
     width: 75px;
     height: 75px;
+
+    text-align: center;
+    display: block;
+    vertical-align: middle;
+    line-height: 75px;
+
     //transform: translateX(-50%);
 
     transition: color .2s, background-color .2s;
@@ -136,13 +141,13 @@
     .radio-all:checked ~ .portfolio-item {
         opacity: 0.5;
     }
+}
 
-    .tiny-fix {
-        display: block;
+.tiny-fix {
+    display: block;
 
-        img {
-            max-width: 100%;
-            height: auto;
-        }
+    img {
+        max-width: 100%;
+        height: auto;
     }
 }

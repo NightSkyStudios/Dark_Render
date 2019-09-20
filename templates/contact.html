@@ -35,60 +35,59 @@
 {% include "header_small.html" %}
 
 
+
 <section class="margin-after-header-small">
     <div class="contact-container" style="">
         <video autoplay muted loop id="video">
             <source src="{% static "video/timelapse.mp4" %}" type="video/mp4">
         </video>
-        <div class="contact-center">
-            <div class="contact">
-                <div class="media contact-info">
-                    <span class="contact-info__icon"><i class="fas fa-map"></i></span>
-                    <div class="media-body">
-                        <h3>Location</h3>
-                        <p>Lviv, Ukraine</p>
-                    </div>
-                </div>
-                <div class="media contact-info">
-                    <span class="contact-info__icon"><i class="fas fa-mobile-alt"></i></span>
-                    <div class="media-body">
-                        <h3>Number</h3>
-                        <p>+358554544554454</p>
-                    </div>
-                </div>
-                <div class="media contact-info">
-                    <span class="contact-info__icon"><i class="fas fa-envelope"></i></span>
-                    <div class="media-body">
-                        <h3>Email</h3>
-                        <p>main@dark-render.com</p>
-                    </div>
-                </div>
-                <div class="media contact-info">
-                    <span class="contact-info__icon"><i class="fab fa-skype"></i></span>
-                    <div class="media-body">
-                        <h3>Skype</h3>
-                        <p>lorem.ipsum</p>
-                    </div>
-                </div>
+        <div class="contact-grid" style="/*background-image: url({% static 'img/index/1.jpg' %})*/ ">
+            <div class="contact-details">
+                <h2 class="text-center section-intro__subtitle bottom-border align-items-center fs-2">Company details</h2>
+                <ul>
+                    <li>Location: Ukraine, Lviv</li>
+                    <li>Email: pidor@gandon.com</li>
+                    <li>Number: +380yanabyutobieblo</li>
+                    <li>Skype: pchka.pidarasiv</li>
+                </ul>
             </div>
-            <div class="text-center contact-form">
-                <h2 class="section-intro__subtitle bottom-border align-items-center fs-2">Or contact us right now</h2>
-                <span class="section-intro__title mb-5 d-block">Dark-Render is based in Lviv. We collaborate with architects, designers and real estate agencies around the world. We speak English, Russian . Contact us to book our services or to ask any questions, we will be very happy to hear from you!</span>
+            <div class="contact-grid-form">
+                <h2 class="text-center section-intro__subtitle bottom-border align-items-center fs-2">Or contact us right now</h2>
+                <span class="d-block text-center section-intro__title d-block">Dark-Render is based in Lviv. We collaborate with architects, designers and real estate agencies around the world. We speak English, Russian . Contact us to book our services or to ask any questions, we will be very happy to hear from you!</span>
                 <form method="post">
                     {% csrf_token %}
-                    <label for="email">E-mail</label>
-                    <input required placeholder="MagicPeople@example.com" name="email" id="email" type="email"><br>
-                    <label for="name">Your Name</label>
-                    <input required placeholder="Firstname Surnamesky" name="name" id="name" type="text"><br>
-                    <label for="message">What you want to say?</label>
-                    <textarea required placeholder="Your message here" rows="5" name="message" id="message" type="text"></textarea><br>
-                    <button class="btn btn--rightBorder btn--leftBorder" type="submit">Submit</button>
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label class="full-label required" for="first_name">First Name</label>
+                            <input required name="first_name" id="first_name" type="text">
+                        </div>
+                        <div class="input-group">
+                            <label class="full-label required" for="last_name">Last Name</label>
+                            <input required name="last_name" id="last_name" type="text">
+                        </div>
+                        <div class="input-group">
+                            <label class="full-label required" for="email">E-mail</label>
+                            <input required name="email" id="email" type="email">
+                        </div>
+                        <div class="input-group">
+                            <label class="full-label" for="whatsapp">WhatsApp</label>
+                            <input name="whatsapp" id="whatsapp" type="text">
+                        </div>
+                    </div>
+                    <label class="full-label required" for="message">Your message here</label>
+                    <textarea required rows="5" name="message" id="message"
+                              type="text"></textarea><br>
+                    <div>
+                        <input required name="terms" id="terms" type="checkbox">
+                        <label class="custom_check" for="terms"></label>
+                        <label class="required" for="terms">Terms and Coditions blyat</label>
+                    </div>
+                    <button class="block-center btn btn--rightBorder btn--leftBorder" type="submit">Submit</button>
                 </form>
             </div>
         </div>
     </div>
 </section>
-
 
 {#{% include 'footer.html' %}#}
 

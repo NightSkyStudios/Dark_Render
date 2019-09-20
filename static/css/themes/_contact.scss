@@ -145,7 +145,120 @@
             }
         }
     }
-
 }
 
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    position: absolute;
+    //top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    //filter: sepia(50%);
+    //height: 50vh;
+    width: 80vw;
+    background-size: cover;
+    background: black;
+    margin-bottom: 5em;
 
+    @media only screen and (max-width: 800px){
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+
+        &:checked ~ .custom_check {
+            background: $primary-color;
+
+        }
+    }
+
+    .custom_check {
+        height: 1em;
+        width: 1em;
+        border-radius: 5px;
+        background-color: black;
+        border: solid 1px white;
+        transition: background-color .3s;
+        margin-bottom: 0;
+    }
+
+    .contact-details {
+
+        padding: 2em;
+        ul{
+            li{
+                list-style: none;
+                margin-bottom: 3em;
+            }
+        }
+    }
+
+    .contact-grid-form {
+        padding: 2em;
+
+        .input-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 1em;
+        }
+
+        .full-label {
+            display: inline-block;
+            width: 100%;
+        }
+
+        .required{
+            &:after{
+                content: " *";
+                color: $primary-color;
+            }
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            background: transparent;
+            border: none;
+            border-bottom: solid 2px white;
+            margin-bottom: 1em;
+            width: 100%;
+            color: white;
+
+            transition: border-bottom-color .3s;
+
+            &:focus {
+                border-bottom-color: $primary-color;
+                outline: none;
+            }
+
+            &:invalid {
+                border-bottom-color: #ff3838;
+            }
+        }
+
+        textarea {
+            background: transparent;
+            border: none;
+            border-bottom: solid 2px white;
+            margin-bottom: 1em;
+            width: 100%;
+            resize: none;
+            color: white;
+
+            transition: border-bottom-color .3s;
+
+            &:focus {
+                border-bottom-color: $primary-color;
+                outline: none;
+            }
+
+            &:invalid {
+                border-bottom-color: #ff3838;
+            }
+        }
+    }
+}
