@@ -35,25 +35,28 @@
 {% include "header_small.html" %}
 
 
-
 <section class="margin-after-header-small">
     <div class="contact-container" style="">
         <video autoplay muted loop id="video">
-            <source src="{% static "video/timelapse.mp4" %}" type="video/mp4">
+            <source src="{% static "video/Video_8.mp4" %}" type="video/mp4">
         </video>
         <div class="contact-grid" style="/*background-image: url({% static 'img/index/1.jpg' %})*/ ">
-            <div class="contact-details">
-                <h2 class="text-center section-intro__subtitle bottom-border align-items-center fs-2">Company details</h2>
+            <div class="contact-details text-center">
+                <h2 class="text-center section-intro__subtitle bottom-border align-items-center fs-2">Company
+                    details</h2>
                 <ul>
-                    <li>Location: Ukraine, Lviv</li>
-                    <li>Email: pidor@gandon.com</li>
-                    <li>Number: +380yanabyutobieblo</li>
-                    <li>Skype: pchka.pidarasiv</li>
+                    <li>Email: info@dark-render.com</li>
+                    <li>Location: 53-332 Lviv. Ukraine
+                    </li>
+                    <li>Number(WhatsApp): +380993799877</li>
+                    <li>WORKING HOURS:
+                        <br>Monday-Friday 11:00 – 18:30</li>
                 </ul>
             </div>
             <div class="contact-grid-form">
-                <h2 class="text-center section-intro__subtitle bottom-border align-items-center fs-2">Or contact us right now</h2>
-                <span class="d-block text-center section-intro__title d-block">Dark-Render is based in Lviv. We collaborate with architects, designers and real estate agencies around the world. We speak English, Russian . Contact us to book our services or to ask any questions, we will be very happy to hear from you!</span>
+                <h2 class="text-center section-intro__subtitle bottom-border align-items-center fs-2">Or contact us
+                    right now</h2>
+                <span style="text-transform: none;" class="text-white d-block text-center section-intro__title d-block">Dark-Render is based in Lviv. We collaborate with architects, designers and real estate agencies around the world. We speak English, Russian . Contact us to book our services or to ask any questions, we will be very happy to hear from you!</span>
                 <form method="post">
                     {% csrf_token %}
                     <div class="input-grid">
@@ -70,18 +73,13 @@
                             <input required name="email" id="email" type="email">
                         </div>
                         <div class="input-group">
-                            <label class="full-label" for="whatsapp">WhatsApp</label>
-                            <input name="whatsapp" id="whatsapp" type="text">
+                            <label class="full-label required" for="whatsapp">WhatsApp</label>
+                            <input required name="whatsapp" id="whatsapp" type="text">
                         </div>
                     </div>
                     <label class="full-label required" for="message">Your message here</label>
                     <textarea required rows="5" name="message" id="message"
                               type="text"></textarea><br>
-                    <div>
-                        <input required name="terms" id="terms" type="checkbox">
-                        <label class="custom_check" for="terms"></label>
-                        <label class="required" for="terms">Terms and Coditions blyat</label>
-                    </div>
                     <button class="block-center btn btn--rightBorder btn--leftBorder" type="submit">Submit</button>
                 </form>
             </div>
