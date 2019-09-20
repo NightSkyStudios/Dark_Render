@@ -76,6 +76,17 @@
     transform: translateX(-50%);
     max-width: 80%;
     flex-wrap: wrap;
+
+    .checkbox-switch {
+
+        display: none;
+
+        &:checked + label {
+            background: $primary-color;
+            border-color: $primary-color;
+            color: $charade;
+        }
+    }
 }
 
 .sq-button {
@@ -120,17 +131,6 @@
         margin: 0;
         width: 50%;
         width: 128px;
-    }
-
-    .checkbox-switch {
-
-        display: none;
-
-        &:checked + label {
-            background: $primary-color;
-            border-color: $primary-color;
-            color: $charade;
-        }
     }
 
     .radio-all:checked ~ .portfolio-item {
