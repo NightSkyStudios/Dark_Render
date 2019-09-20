@@ -224,7 +224,7 @@
         input[type="email"] {
             background: transparent;
             border: none;
-            border-bottom: solid 2px white;
+            border-bottom: solid 2px $primary-color;
             margin-bottom: 1em;
             width: 100%;
             color: white;
@@ -232,7 +232,7 @@
             transition: border-bottom-color .3s;
 
             &:focus {
-                border-bottom-color: $primary-color;
+                border-bottom-color: white;
                 outline: none;
             }
 
@@ -244,7 +244,7 @@
         textarea {
             background: transparent;
             border: none;
-            border-bottom: solid 2px white;
+            border-bottom: solid 2px $primary-color;
             margin-bottom: 1em;
             width: 100%;
             resize: none;
