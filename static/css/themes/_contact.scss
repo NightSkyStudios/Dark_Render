@@ -151,20 +151,28 @@
     display: grid;
     grid-template-columns: 1fr 2fr;
     position: absolute;
-    //top: 50%;
     left: 50%;
-    transform: translate(-50%, 0);
-    //filter: sepia(50%);
-    //height: 50vh;
-    width: 80vw;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 70vw;
+    max-width: 1000px;
     background-size: cover;
     background: rgba(black, 0.9);
     margin-bottom: 5em;
     backdrop-filter: saturate(5);
 
-    @media only screen and (max-width: 800px){
+    @media only screen and (max-width: 800px) {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+    }
+
+    @media only screen and (max-height: 900px) {
+        //top: 65%
+    }
+
+    @media only screen and (max-width: 800px) {
+        top: 10em;
+        transform: translateX(-50%);
     }
 
     input[type="checkbox"] {
@@ -190,8 +198,9 @@
     .contact-details {
 
         padding: 2em;
-        ul{
-            li{
+
+        ul {
+            li {
                 list-style: none;
                 margin-bottom: 3em;
             }
@@ -213,8 +222,8 @@
             width: 100%;
         }
 
-        .required{
-            &:after{
+        .required {
+            &:after {
                 content: " *";
                 color: $primary-color;
             }
@@ -224,7 +233,7 @@
         input[type="email"] {
             background: transparent;
             border: none;
-            border-bottom: solid 2px $primary-color;
+            border-bottom: solid 2px white;
             margin-bottom: 1em;
             width: 100%;
             color: white;
@@ -232,7 +241,7 @@
             transition: border-bottom-color .3s;
 
             &:focus {
-                border-bottom-color: white;
+                border-bottom-color: $primary-color;
                 outline: none;
             }
 
@@ -244,7 +253,7 @@
         textarea {
             background: transparent;
             border: none;
-            border-bottom: solid 2px $primary-color;
+            border-bottom: solid 2px white;
             margin-bottom: 1em;
             width: 100%;
             resize: none;
