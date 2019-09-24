@@ -33,9 +33,11 @@ def about(request):
 
 
 def contact(request):
+    ctx = {'success': False}
     if request.method == 'POST':
         send_contact(request)
-    return render(request, 'contact.html')
+        ctx['success'] = True
+    return render(request, 'contact.html', ctx)
 
 
 def projects(request):

@@ -111,8 +111,8 @@
                 color: grey;
             }
 
-            &:invalid {
-                border-color: #913d41;
+            &:valid {
+                border-color: $primary-color;
             }
         }
 
@@ -140,8 +140,8 @@
                 color: grey;
             }
 
-            &:invalid {
-                border-color: #913d41;
+            &:valid {
+                border-color: $primary-color;
             }
         }
     }
@@ -247,8 +247,8 @@
                 outline: none;
             }
 
-            &:invalid {
-                border-bottom-color: #912020;
+            &:valid {
+                border-bottom-color: $primary-color;
             }
         }
 
@@ -268,9 +268,74 @@
                 outline: none;
             }
 
-            &:invalid {
-                border-bottom-color: #912020;
+            &:valid {
+                border-bottom-color: $primary-color;
             }
         }
+    }
+}
+
+.alert-success{
+    background: $success-color;
+    position: fixed;
+    top: -5em;
+    opacity: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 2em;
+    color: white;
+    font-size: 1rem;
+    animation: alertIn .5s .3s forwards, alertOut .3s 5s forwards;
+    z-index: 10;
+    @media only screen and (max-width: 900px){
+        width:100%;
+    }
+
+    &:after{
+        content: "";
+        width: 100%;
+        height: 5px;
+        position: absolute;
+        background: green;
+        left: 0;
+        bottom: 0;
+        animation: alertAfter 4.8s .2s linear forwards;
+    }
+}
+
+@keyframes alertIn {
+    0%{
+        top: -5em;
+        opacity: 0;
+    }
+    100%{
+        top: 1em;
+        opacity: 1;
+        @media only screen and (max-width: 900px){
+            top:8em
+        }
+    }
+}
+
+@keyframes alertOut {
+    0%{
+        top: 1em;
+        opacity: 1;
+        @media only screen and (max-width: 900px){
+            top:8em
+        }
+    }
+    100%{
+        top: -5em;
+        opacity: 0;
+    }
+}
+
+@keyframes alertAfter {
+    0%{
+        width: 100%;
+    }
+    100%{
+        width: 0;
     }
 }

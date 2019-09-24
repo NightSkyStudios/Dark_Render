@@ -1,4 +1,4 @@
-ре схожду{% load static %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +12,7 @@
     <meta property="og:url" content="https://dark-render.com/">
     <meta property="og:type" content="art-studio"/>
     <meta property="og:image" content="{% static 'img/index/portret.png' %}">
-    >
+
 
     <title>Contact</title>
 
@@ -33,7 +33,9 @@
 {% include 'hamburger.html' %}
 
 {% include "header_small.html" %}
-
+{% if success %}
+<div class="alert-success">Thank you for writing us. We will contact you as soon as possible</div>
+{% endif %}
 
 <section class="margin-after-header-small">
     <div class="contact-container" style="">
