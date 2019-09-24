@@ -1,8 +1,20 @@
 from django.shortcuts import render
 from .models import *
+from django.core.mail import send_mail, BadHeaderError
 
 
 # Create your views here.
+
+def send_contact(request):
+    fname = request.POST.get('first_name', '')
+    lname = request.POST.get('last_name', '')
+    subject = 'Message from website'
+    message = request.POST.get('message', '')
+    from_email = request.POST.get('email', '')
+    whatsapp = request.POST.get('whatsapp', '')
+    messages = 'Name and Surname: {} {} \nWhatsApp: {}\nFrom: {}\nMessage: \n{}\n\n\n\nSent From dark-render.com'.format(
+        fname, lname, whatsapp, from_email, message)
+    send_mail(subject, messages, 'noreply@dark-render.com', ['info@dark-render.com'], fail_silently=False)
 
 
 def index(request):
@@ -20,8 +32,9 @@ def about(request):
     return render(request, 'about.html', ctx)
 
 
-
 def contact(request):
+    if request.method == 'POST':
+        send_contact(request)
     return render(request, 'contact.html')
 
 

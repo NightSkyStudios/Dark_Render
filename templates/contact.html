@@ -7,10 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta property="og:site_name" content="Dark Render"/>
     <meta property="og:title" content="DARK-RENDER is a creative studio that produces high-end visualizations. "/>
-    <meta property="og:description" content="DARK RENDER is based in the beautiful city of Lviv, where historical buildings hide a buzzing party, food and art scene.The DARK RENDER team is comprised of a diverse and skillful group of professionals who hail from over 4 different countries."/>
+    <meta property="og:description"
+          content="DARK RENDER is based in the beautiful city of Lviv, where historical buildings hide a buzzing party, food and art scene.The DARK RENDER team is comprised of a diverse and skillful group of professionals who hail from over 4 different countries."/>
     <meta property="og:url" content="https://dark-render.com/">
     <meta property="og:type" content="art-studio"/>
-    <meta property="og:image" content="{% static 'img/index/portret.png' %}">>
+    <meta property="og:image" content="{% static 'img/index/portret.png' %}">
+    >
 
     <title>Contact</title>
 
@@ -36,41 +38,61 @@
 <section class="margin-after-header-small">
     <div class="contact-container" style="">
         <video autoplay muted loop id="video">
-            <source src="{% static "video/timelapse.mp4" %}" type="video/mp4">
+            <source src="{% static "video/video_8.mp4" %}" type="video/mp4">
         </video>
-        <div class="contact">
-            <div class="media contact-info">
-                <span class="contact-info__icon"><i class="fas fa-map"></i></span>
-                <div class="media-body">
-                    <h3>Location</h3>
-                    <p>Lviv, Ukraine</p>
-                </div>
+        <div class="contact-grid" style="/*background-image: url({% static 'img/index/1.jpg' %})*/ ">
+            <div class="contact-details text-center">
+                <h2 class="text-center section-intro__subtitle bottom-border align-items-center fs-2">Company
+                    details</h2>
+                <ul>
+                    <li>Email: <a href="mailto:info@dark-render.com">info@dark-render.com</a></li>
+                    <li>Location: <a href="https://bit.ly/2kzNn36" target="_blank"> 53-332 Lviv. Ukraine</a></li>
+                    <li>Number(WhatsApp): <a href="https://api.whatsapp.com/send?phone=380993799877">+38 (099) 379 98
+                        77</a></li>
+                    <li>WORKING HOURS:
+                        <br>Monday-Friday 11:00 – 18:30
+                    </li>
+                </ul>
+                <ul class="social-icons mt-2 mt-sm-0">
+                    <li><a href="https://www.instagram.com/darkrender.studio/" target="_blank"><i
+                            class="fab fa-instagram"></i></a></li>
+                    <li><a href="https://www.behance.net/darkrender" target="_blank"><i class="fab fa-behance"></i></a>
+                    </li>
+                </ul>
             </div>
-            <div class="media contact-info">
-                <span class="contact-info__icon"><i class="fas fa-mobile-alt"></i></span>
-                <div class="media-body">
-                    <h3>Number</h3>
-                    <p>+358554544554454</p>
-                </div>
-            </div>
-            <div class="media contact-info">
-                <span class="contact-info__icon"><i class="fas fa-envelope"></i></span>
-                <div class="media-body">
-                    <h3>Email</h3>
-                    <p>main@dark-render.com</p>
-                </div>
-            </div>
-            <div class="media contact-info">
-                <span class="contact-info__icon"><i class="fab fa-skype"></i></span>
-                <div class="media-body">
-                    <h3>Skype</h3>
-                    <p>lorem.ipsum</p>
-                </div>
+            <div class="contact-grid-form">
+                <h2 class="text-center section-intro__subtitle bottom-border align-items-center fs-2">Or contact us
+                    right now</h2>
+                <span style="text-transform: none;" class="text-white d-block text-center section-intro__title d-block">Dark-Render is based in Lviv. We collaborate with architects, designers and real estate agencies around the world. We speak English, Russian . Contact us to book our services or to ask any questions, we will be very happy to hear from you!</span>
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="input-grid">
+                        <div class="input-group">
+                            <label class="full-label required" for="first_name">First Name</label>
+                            <input required name="first_name" id="first_name" type="text">
+                        </div>
+                        <div class="input-group">
+                            <label class="full-label required" for="last_name">Last Name</label>
+                            <input required name="last_name" id="last_name" type="text">
+                        </div>
+                        <div class="input-group">
+                            <label class="full-label required" for="email">E-mail</label>
+                            <input required name="email" id="email" type="email">
+                        </div>
+                        <div class="input-group">
+                            <label class="full-label required" for="whatsapp">WhatsApp</label>
+                            <input required name="whatsapp" id="whatsapp" type="text">
+                        </div>
+                    </div>
+                    <label class="full-label required" for="message">Your message here</label>
+                    <textarea required rows="5" name="message" id="message"
+                              type="text"></textarea><br>
+                    <button class="block-center btn btn--rightBorder btn--leftBorder" type="submit">Submit</button>
+                </form>
             </div>
         </div>
     </div>
 </section>
-
 
 {#{% include 'footer.html' %}#}
 
@@ -80,16 +102,16 @@
 <script src="{% static 'vendor/owl-carousel/owl.carousel.min.js' %}"></script>
 
 <script>
-  var dropToggle = $('.menu_right > li').has('ul').children('a');
-  dropToggle.on('click', function () {
-    dropToggle.not(this).closest('li').find('ul').slideUp(200);
-    $(this).closest('li').children('ul').slideToggle(200);
-    return false;
-  });
+    var dropToggle = $('.menu_right > li').has('ul').children('a');
+    dropToggle.on('click', function () {
+        dropToggle.not(this).closest('li').find('ul').slideUp(200);
+        $(this).closest('li').children('ul').slideToggle(200);
+        return false;
+    });
 
-  $(".toggle_icon").on('click', function () {
-    $('body').toggleClass("open");
-  });
+    $(".toggle_icon").on('click', function () {
+        $('body').toggleClass("open");
+    });
 </script>
 </body>
 </html>

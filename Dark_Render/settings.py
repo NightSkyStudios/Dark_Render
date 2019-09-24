@@ -23,6 +23,7 @@ else:
     ALLOWED_HOSTS = ['https://dark-render.com','https://www.dark-render.com','www.dark-render.com','dark-render.com']
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -43,7 +44,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
 if not DEBUG:
@@ -53,6 +54,7 @@ if not DEBUG:
     SECURE_SSL_REDIRECT = True
     SECURE_BROWSER_XSS_FILTER = True
     SECURE_CONTENT_TYPE_NOSNIFF = True
+
 
 ROOT_URLCONF = 'Dark_Render.urls'
 
@@ -141,7 +143,6 @@ if not DEBUG:
 else:
     MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-
 # TinyMCE
 TINYMCE_JS_URL = os.path.join("", "js/tinymce/tinymce.min.js")
 TINYMCE_JS_ROOT = os.path.join("", "js/tinymce")
@@ -174,3 +175,11 @@ TINYMCE_DEFAULT_CONFIG = {
     'statusbar': True,
 }
 
+# EMAIL config
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+EMAIL_USE_SSL = True
+EMAIL_HOST = 'dark-render.com'
+EMAIL_PORT = 465
+EMAIL_HOST_USER = 'noreply@dark-render.com'
+EMAIL_HOST_PASSWORD = '*******'
