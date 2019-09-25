@@ -34,22 +34,24 @@
 {% include 'hamburger.html' %}
 
 {% include "header_small.html" %}
-
+{% if success %}
+<div class="alert-success">Thank you for writing us. We will contact you as soon as possible</div>
+{% endif %}
 
 <section class="margin-after-header-small">
     <div class="contact-container" style="">
         <video autoplay muted loop id="video">
-            <source src="{% static "video/Video_8.mp4" %}" type="video/mp4">
+            <source src="{% static "video/video_8.mp4" %}" type="video/mp4">
         </video>
         <div class="contact-grid" style="/*background-image: url({% static 'img/index/1.jpg' %})*/ ">
             <div class="contact-details text-center">
                 <h2 class="text-center section-intro__subtitle bottom-border align-items-center fs-2">Company
                     details</h2>
                 <ul>
-                    <li>Email: info@dark-render.com</li>
-                    <li>Location: 53-332 Lviv. Ukraine
-                    </li>
-                    <li>Number(WhatsApp): +380993799877</li>
+                    <li>Email: <a class="link-pr" href="mailto:info@dark-render.com">info@dark-render.com</a></li>
+                    <li>Location: <a class="link-pr"  href="https://bit.ly/2kzNn36" target="_blank">Lviv. Ukraine</a></li>
+                    <li>Number(WhatsApp): <a class="link-pr"  href="https://api.whatsapp.com/send?phone=380993799877">+38 (099) 379 98
+                        77</a></li>
                     <li>WORKING HOURS:
                         <br>Monday-Friday 11:00 – 18:30
                     </li>
