@@ -4,15 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{ project.title }}</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta property="og:site_name" content="Dark Render"/>
     <meta property="og:title" content="DARK-RENDER is a creative studio that produces high-end visualizations. "/>
-    <meta property="og:description" content="DARK RENDER is based in the beautiful city of Lviv, where historical buildings hide a buzzing party, food and art scene.The DARK RENDER team is comprised of a diverse and skillful group of professionals who hail from over 4 different countries."/>
+    <meta property="og:description"
+          content="DARK RENDER is based in the beautiful city of Lviv, where historical buildings hide a buzzing party, food and art scene.The DARK RENDER team is comprised of a diverse and skillful group of professionals who hail from over 4 different countries."/>
     <meta property="og:url" content="https://dark-render.com/">
     <meta property="og:type" content="art-studio"/>
-    <meta property="og:image" content="{% static 'img/index/portret.png' %}">
-    
-    
+    <meta property="og:image" content="{% static 'img/LOGO_FIN.png' %}">
+    <meta name="description" content="Provide interior images with detailed materials and lights">
+    <meta name="robots" content="index, follow">
+    <title>Dark Render | {{ project.title }}</title>
+
+
     <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}">
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic"
@@ -36,12 +40,12 @@
         </a>
 
         <div class="owl-carousel owl-theme heroCarousel">
-         <div class="item">
-                    <div class="hero__slide">
-                        <img src="{{ project.image.url }}" alt="">
-                    </div>
+            <div class="item">
+                <div class="hero__slide">
+                    <img src="{{ project.image.url }}" alt="">
                 </div>
-             {% for photo in gallery %}
+            </div>
+            {% for photo in gallery %}
                 <div class="item">
                     <div class="hero__slide">
                         <img src="{{ photo.image.url }}" number="{{ forloop.counter }}" alt="">
@@ -50,7 +54,7 @@
             {% endfor %}
         </div>
 
-        </div>
+    </div>
 </header>
 
 <div class="container my-5">
@@ -71,7 +75,7 @@
 .
 <script>
 
-     var heroCarousel = $('.heroCarousel');
+    var heroCarousel = $('.heroCarousel');
     heroCarousel.owlCarousel({
         center: true,
         autoplay: true,
