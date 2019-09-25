@@ -14,6 +14,7 @@
     <meta property="og:image" content="{% static 'img/LOGO_FIN.png' %}">
     <meta name="description" content="Provide interior images with detailed materials and lights">
     <meta name="robots" content="index, follow">
+    <meta name="keywords" content="furniture, render, 3d model, 3d printer models, 3d animation"/>
 
     <title>Dark Render | Contact</title>
 
@@ -51,14 +52,21 @@
 
     <h3 class="text-center section-intro__subtitle">Categories</h3>
     <div class="categories align-center">
-        <input {% if filter == '*' %}checked{% endif %} name="radio-switch" id="chbx-all" type="radio" href="" class="checkbox-switch">
+        <input {% if filter == '*' %}checked{% endif %} name="radio-switch" id="chbx-all" type="radio" href=""
+               class="checkbox-switch">
         <label data-filter="*" onclick="filter(this.getAttribute('data-filter'))" for="chbx-all" class="btn btn-label">All</label>
-        <input {% if filter == 'IT' %}checked{% endif %} name="radio-switch" id="chbx-interior" type="radio" href="" class="checkbox-switch">
-        <label data-filter=".IT" onclick="filter(this.getAttribute('data-filter'))" for="chbx-interior" class="btn btn-label">Interior</label>
-        <input {% if filter == 'EX' %}checked{% endif %} name="radio-switch" id="chbx-exterior" type="radio" href="" class="checkbox-switch">
-        <label data-filter=".EX" onclick="filter(this.getAttribute('data-filter'))" for="chbx-exterior" class="btn btn-label">Exterior</label>
-        <input {% if filter == 'FR' %}checked{% endif %} name="radio-switch" id="chbx-furniture" type="radio" href="" class="checkbox-switch">
-        <label data-filter=".FR" onclick="filter(this.getAttribute('data-filter'))" for="chbx-furniture" class="btn btn-label">Furniture</label>
+        <input {% if filter == 'IT' %}checked{% endif %} name="radio-switch" id="chbx-interior" type="radio" href=""
+               class="checkbox-switch">
+        <label data-filter=".IT" onclick="filter(this.getAttribute('data-filter'))" for="chbx-interior"
+               class="btn btn-label">Interior</label>
+        <input {% if filter == 'EX' %}checked{% endif %} name="radio-switch" id="chbx-exterior" type="radio" href=""
+               class="checkbox-switch">
+        <label data-filter=".EX" onclick="filter(this.getAttribute('data-filter'))" for="chbx-exterior"
+               class="btn btn-label">Exterior</label>
+        <input {% if filter == 'FR' %}checked{% endif %} name="radio-switch" id="chbx-furniture" type="radio" href=""
+               class="checkbox-switch">
+        <label data-filter=".FR" onclick="filter(this.getAttribute('data-filter'))" for="chbx-furniture"
+               class="btn btn-label">Furniture</label>
     </div>
 </header>
 
