@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import *
 from django.core.mail import send_mail, BadHeaderError
+from .decorators import check_recaptcha
 
 
 # Create your views here.
@@ -14,7 +15,7 @@ def send_contact(request):
     whatsapp = request.POST.get('whatsapp', '')
     messages = 'Name and Surname: {} {} \nWhatsApp: {}\nFrom: {}\nMessage: \n{}\n\n\n\nSent From dark-render.com'.format(
         fname, lname, whatsapp, from_email, message)
-    send_mail(subject, messages, 'noreply@dark-render.com', ['info@dark-render.com'], fail_silently=False)
+    send_mail(subject, messages, 'noreply@dark-render.com', ['lakixi5861@mytrumail.com'], fail_silently=False)
 
 
 def index(request):
@@ -31,12 +32,16 @@ def about(request):
     ctx = {'partners': partners}
     return render(request, 'about.html', ctx)
 
-
+@check_recaptcha
 def contact(request):
-    ctx = {'success': False}
+    ctx = {'success': False,
+           'fail': False}
     if request.method == 'POST':
-        send_contact(request)
-        ctx['success'] = True
+        if request.recaptcha_is_valid:
+            send_contact(request)
+            ctx['success'] = True
+        else:
+            ctx['fail'] = True
     return render(request, 'contact.html', ctx)
 
 

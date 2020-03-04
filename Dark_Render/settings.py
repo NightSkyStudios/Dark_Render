@@ -131,6 +131,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 if not DEBUG:
     STATIC_ROOT = '/home3/darkrend/public_html/static'
 STATICFILES_DIRS = [
@@ -177,6 +178,8 @@ TINYMCE_DEFAULT_CONFIG = {
 
 # EMAIL config
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+GOOGLE_RECAPTCHA_SECRET_KEY = '*******'
 
 EMAIL_USE_SSL = True
 EMAIL_HOST = 'dark-render.com'
