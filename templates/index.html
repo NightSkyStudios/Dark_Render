@@ -70,7 +70,7 @@
             <div class="col-md-7 pl-xl-5">
                 <div class="section-intro">
                     <h4 class="section-intro__title">About our Company</h4>
-                    <h2 class="section-intro__subtitle">WHAT WE MAKE?</h2>
+                    <h2 class="section-intro__subtitle">WHO WE ARE?</h2>
                 </div>
                 <p>DARK-RENDER
                     Is a creative studio that produces high-end visualizations. We provide our clients with top-class
@@ -92,7 +92,7 @@
                 <div class="media align-items-center overview__single">
                     <span class="overview__single__icon"><i class="ti-crown"></i></span>
                     <div class="media-body">
-                        <h3>116</h3>
+                        <h3>176</h3>
                         <p>Projects done</p>
                     </div>
                 </div>
@@ -102,11 +102,26 @@
                     <span class="overview__single__icon"><i class="ti-user"></i></span>
                     <div class="media-body">
                         <h3>4</h3>
-                        <p>Team leads</p>
+                        <p>3D Artists</p>
                     </div>
                 </div>
             </div>
+
         </div>
+        <div class="partners " style="margin-top: 5rem">
+        <h3 class="section-intro__subtitle bottom-border-center">Partners</h3>
+        <span>PARTNERS CONFIDE US</span>
+        <div class="partners-grid">
+            {% for item in partners %}
+                <div class="partners-grid-wraper">
+                    <a href="{{ item.link }}">
+                        <img class="partners-grid-item" src="{{ item.image.url }}" alt="">
+                    </a>
+                </div>
+
+            {% endfor %}
+        </div>
+    </div>
     </div>
 </section>
 

@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta property="og:site_name" content="Dark Render"/>
-    <meta property="og:title" content="DARK-RENDER is a creative studio that produces high-end visualizations. "/>
+    <meta property="og:title" content="Dark Render | {{ project.title }}"/>
     <meta property="og:description"
           content="DARK RENDER is based in the beautiful city of Lviv, where historical buildings hide a buzzing party, food and art scene.The DARK RENDER team is comprised of a diverse and skillful group of professionals who hail from over 4 different countries."/>
     <meta property="og:url" content="https://dark-render.com/">
     <meta property="og:type" content="art-studio"/>
-    <meta property="og:image" content="{% static 'img/LOGO_FIN.png' %}">
+    <meta property="og:image" content="{{ project.image.url }}">
     <meta name="description" content="We model full detailed building in 3D, our artists will create atmospheric photo realistic images, to your liking">
     <meta name="robots" content="index, follow">
     <meta name="keywords" content="furniture, render, 3d model, 3d printer models, 3d animation"/>
@@ -40,26 +40,12 @@
             <img src="{% static 'img/LOGO_FIN.png' %}" alt="">
         </a>
 
-        <div class="owl-carousel owl-theme heroCarousel">
-            <div class="item">
-                <div class="hero__slide">
-                    <img src="{{ project.image.url }}" alt="">
-                </div>
-            </div>
-            {% for photo in gallery %}
-                <div class="item">
-                    <div class="hero__slide">
-                        <img src="{{ photo.image.url }}" number="{{ forloop.counter }}" alt="">
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
 
     </div>
 </header>
 
 <div class="container my-5">
-    <h2 class="section-intro__subtitle bottom-border" style="text-align: center;">{{ project.title }}</h2>
+    <h2 class="section-intro__subtitle bottom-border " style="text-align: center; margin-top: 7rem;">{{ project.title }}</h2>
     <span class="tiny-fix">
         {{ project.mce_description|safe }}
     </span>

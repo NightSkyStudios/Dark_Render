@@ -19,9 +19,11 @@ def send_contact(request):
 
 
 def index(request):
+    partners = Partner.objects.all()
     slider = Slider.objects.all()
 
-    ctx = {'slider': slider}
+    ctx = {'slider': slider,
+           'partners': partners}
 
     return render(request, 'index.html', ctx)
 
