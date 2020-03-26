@@ -34,6 +34,7 @@ def about(request):
     ctx = {'partners': partners}
     return render(request, 'about.html', ctx)
 
+
 @check_recaptcha
 def contact(request):
     ctx = {'success': False,
@@ -48,7 +49,7 @@ def contact(request):
 
 
 def projects(request):
-    projects = Project.objects.all()
+    projects = Project.objects.all().order_by('-id')
 
     filter = None
     try:
