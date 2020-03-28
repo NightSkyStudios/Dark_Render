@@ -108,20 +108,7 @@
             </div>
 
         </div>
-        <div class="partners " style="margin-top: 5rem">
-        <h3 class="section-intro__subtitle bottom-border-center">Partners</h3>
-        <span>PARTNERS CONFIDE US</span>
-        <div class="partners-grid">
-            {% for item in partners %}
-                <div class="partners-grid-wraper">
-                    <a href="{{ item.link }}">
-                        <img class="partners-grid-item" src="{{ item.image.url }}" alt="">
-                    </a>
-                </div>
 
-            {% endfor %}
-        </div>
-    </div>
     </div>
 </section>
 
@@ -205,6 +192,21 @@
         </div>
     </div>
 </section>
+
+<div class="partners " style="margin-top: 5rem">
+        <h3 class="section-intro__subtitle bottom-border-center">Partners</h3>
+        <span>PARTNERS CONFIDE US</span>
+        <div class="partners-grid">
+            {% for item in partners %}
+                <div class="partners-grid-wraper">
+                    <a href="{{ item.link }}">
+                        <img class="partners-grid-item" src="{{ item.image.url }}" alt="">
+                    </a>
+                </div>
+
+            {% endfor %}
+        </div>
+    </div>
 
 {% include 'footer.html' %}
 
