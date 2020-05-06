@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="{% static 'vendor/owl-carousel/owl.carousel.min.css' %}">
     <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <script src="{% static 'js/isotope.pkgd.js' %}"></script>
 </head>
 <body>
 {% include 'hamburger.html' %}
@@ -171,6 +172,22 @@
                 <p style="margin-bottom: 0;">Provide interior images with detailed materials and lights </p>
             </div>
         </div>
+        <div class="section-intro mt-5" style="text-align: center;">
+            <h2 class="section-intro__subtitle bottom-border align-items-center">Our last works</h2>
+        </div>
+        <div  class="portfolio-grid">
+            {% for item in projects %}
+                <div class="portfolio-item">
+                    <img class="portfolio-image" src="{{ item.image.url }}" alt="">
+                    <div onclick="" class="overlay">
+                        <h2>{{ item.title }}</h2>
+                        <span>{{ item.short_description|truncatechars:32 }}</span>
+                        <br>
+                        <a href="{% url "project_page" item.pk %}" class="sq-button">MORE</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
         <div class="text-center pt-5 mt-5">
             <a href="{% url 'projects' %}" class="btn btn--rightBorder btn--leftBorder">portfolio</a>
         </div>
@@ -194,19 +211,19 @@
 </section>
 
 <div class="partners " style="margin-top: 5rem">
-        <h3 class="section-intro__subtitle bottom-border-center">Partners</h3>
-        <span>PARTNERS CONFIDE US</span>
-        <div class="partners-grid">
-            {% for item in partners %}
-                <div class="partners-grid-wraper">
-                    <a href="{{ item.link }}">
-                        <img class="partners-grid-item" src="{{ item.image.url }}" alt="">
-                    </a>
-                </div>
+    <h3 class="section-intro__subtitle bottom-border-center">Partners</h3>
+    <span>PARTNERS CONFIDE US</span>
+    <div class="partners-grid">
+        {% for item in partners %}
+            <div class="partners-grid-wraper">
+                <a href="{{ item.link }}">
+                    <img class="partners-grid-item" src="{{ item.image.url }}" alt="">
+                </a>
+            </div>
 
-            {% endfor %}
-        </div>
+        {% endfor %}
     </div>
+</div>
 
 {% include 'footer.html' %}
 
@@ -250,6 +267,24 @@
         $('body').toggleClass("open");
     });
 
+    let grid = document.querySelector('.portfolio-grid');
+    var iso = new Isotope(grid, {
+        itemSelector: '.portfolio-item',
+        layoutMode: 'masonry',
+    });
+
+    function filter(attr) {
+        iso.arrange({
+            filter: attr
+        })
+    }
+
+    imagesLoaded(grid).on('progress', function () {
+        // layout Isotope after each image loads
+        iso.layout();
+    });
+
+    filter('.{{ filter }}')
 </script>
 </body>
 </html>

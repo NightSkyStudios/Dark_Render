@@ -21,9 +21,11 @@ def send_contact(request):
 def index(request):
     partners = Partner.objects.all()
     slider = Slider.objects.all()
+    projects = Project.objects.all().order_by('-id')[:6]
 
     ctx = {'slider': slider,
-           'partners': partners}
+           'partners': partners,
+           'projects' : projects}
 
     return render(request, 'index.html', ctx)
 
