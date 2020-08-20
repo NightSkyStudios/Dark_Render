@@ -87,6 +87,25 @@ class Photo(models.Model):
     project = models.ForeignKey(Project, on_delete=models.CASCADE)
 
 
+class VR(models.Model):
+    image = models.ImageField('Зображення',
+                              upload_to='img/vr',
+                              null=True,
+                              blank=True)
+    title = models.CharField('Заголовок',
+                             max_length=225,
+                             help_text='Заголовок проекта')
+    short_description = models.CharField(max_length=128)
+    url = models.URLField()
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'VR'
+        verbose_name_plural = 'VR'
+
+
 @receiver(post_delete)
 def submission_delete(sender, instance, **kwargs):
     try:

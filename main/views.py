@@ -15,7 +15,7 @@ def send_contact(request):
     whatsapp = request.POST.get('whatsapp', '')
     messages = 'Name and Surname: {} {} \nWhatsApp: {}\nFrom: {}\nMessage: \n{}\n\n\n\nSent From dark-render.com'.format(
         fname, lname, whatsapp, from_email, message)
-    send_mail(subject, messages, 'noreply@dark-render.com', ['lakixi5861@mytrumail.com'], fail_silently=False)
+    send_mail(subject, messages, 'noreply@dark-render.com', ['info@dark-render.com'], fail_silently=False)
 
 
 def index(request):
@@ -67,6 +67,13 @@ def projects(request):
 
     return render(request, 'projects.html', ctx)
 
+
+def vr_tours(request):
+    vrs = VR.objects.all().order_by('-id')
+
+    ctx = {'vr': vrs}
+
+    return render(request, 'vr_tours.html', ctx)
 
 def project_page(request, id):
     project = Project.objects.get(pk=id)

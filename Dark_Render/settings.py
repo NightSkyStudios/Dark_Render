@@ -8,7 +8,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'g=ls0putsdcq(8ts3%e()9o&0vrx)g@!!hijnauf#9n!(s!21v'
+SECRET_KEY = 'g=ls0puqesdcq(8ts3%e()9o&0vrx)g@!!hijnauf#9n!(s!21v'
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -46,6 +47,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     #'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
 
 if not DEBUG:
     CSRF_COOKIE_SECURE = True
@@ -131,7 +133,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 if not DEBUG:
     STATIC_ROOT = '/home3/darkrend/public_html/static'
 STATICFILES_DIRS = [
@@ -179,10 +181,10 @@ TINYMCE_DEFAULT_CONFIG = {
 # EMAIL config
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 
-GOOGLE_RECAPTCHA_SECRET_KEY = '*******'
+GOOGLE_RECAPTCHA_SECRET_KEY = '6Ldtld4UAAAAAEG1XoqH6NjDqzigt6L5ZXwT_GYR'
 
 EMAIL_USE_SSL = True
 EMAIL_HOST = 'dark-render.com'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = 'noreply@dark-render.com'
-EMAIL_HOST_PASSWORD = '*****'
+EMAIL_HOST_PASSWORD = 'Falkonest981'

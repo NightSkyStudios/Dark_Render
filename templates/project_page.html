@@ -1,8 +1,8 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta property="og:site_name" content="Dark Render"/>
@@ -11,12 +11,12 @@
           content="DARK RENDER is based in the beautiful city of Lviv, where historical buildings hide a buzzing party, food and art scene.The DARK RENDER team is comprised of a diverse and skillful group of professionals who hail from over 4 different countries."/>
     <meta property="og:url" content="https://dark-render.com/">
     <meta property="og:type" content="art-studio"/>
+    <meta name="google-site-verification" content="QgCDHyZbmSZjBfl99MtT5aVL-MFlKhlVwKzCj5h0HAw" />
     <meta property="og:image" content="{{ project.image.url }}">
     <meta name="description" content="We model full detailed building in 3D, our artists will create atmospheric photo realistic images, to your liking">
     <meta name="robots" content="index, follow">
-    <meta name="keywords" content="furniture, render, 3d model, 3d printer models, 3d animation"/>
+ <meta name="keywords" content="render studio, exterior render, darkness render, photorealistic 3d furniture, 3d exterior render, studio render"/>
     <title>Dark Render | {{ project.title }}</title>
-
 
     <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}">
 
@@ -30,8 +30,10 @@
     <link rel="stylesheet" href="{% static 'vendor/owl-carousel/owl.carousel.min.css' %}">
     <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+	{% include 'gtags_head.html' %}
 </head>
 <body>
+{% include 'gtags_body.html' %}
 {% include "hamburger.html" %}
 
 <header>
@@ -65,9 +67,6 @@
     var heroCarousel = $('.heroCarousel');
     heroCarousel.owlCarousel({
         center: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        animateOut: 'fadeOut',
         mergeFit: true,
         loop: true,
         margin: 10,

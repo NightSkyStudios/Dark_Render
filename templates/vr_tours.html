@@ -46,42 +46,23 @@
     </a>
 
     <div class="container">
-        <h2 class="section-intro__subtitle">Our Projects</h2>
+        <h2 class="section-intro__subtitle">Our VR Tours</h2>
         <div class="btn-group breadcrumb">
             <a href="{% url 'index' %}" class="btn">Home</a>
-            <span class="btn btn--rightBorder">Projects</span>
+            <span class="btn btn--rightBorder">VR Tours</span>
         </div>
-    </div>
-
-    <h3 class="text-center section-intro__subtitle">Categories</h3>
-    <div class="categories align-center">
-        <input {% if filter == '*' %}checked{% endif %} name="radio-switch" id="chbx-all" type="radio" href=""
-               class="checkbox-switch">
-        <label data-filter="*" onclick="filter(this.getAttribute('data-filter'))" for="chbx-all" class="btn btn-label">All</label>
-        <input {% if filter == 'IT' %}checked{% endif %} name="radio-switch" id="chbx-interior" type="radio" href=""
-               class="checkbox-switch">
-        <label data-filter=".IT" onclick="filter(this.getAttribute('data-filter'))" for="chbx-interior"
-               class="btn btn-label">Interior</label>
-        <input {% if filter == 'EX' %}checked{% endif %} name="radio-switch" id="chbx-exterior" type="radio" href=""
-               class="checkbox-switch">
-        <label data-filter=".EX" onclick="filter(this.getAttribute('data-filter'))" for="chbx-exterior"
-               class="btn btn-label">Exterior</label>
-        <input {% if filter == 'FR' %}checked{% endif %} name="radio-switch" id="chbx-furniture" type="radio" href=""
-               class="checkbox-switch">
-        <label data-filter=".FR" onclick="filter(this.getAttribute('data-filter'))" for="chbx-furniture"
-               class="btn btn-label">Furniture</label>
     </div>
 </header>
 
 <div class="portfolio-grid">
-    {% for item in projects %}
-        <div class="portfolio-item {{ item.category }}">
+    {% for item in vr %}
+        <div class="portfolio-item">
             <img class="portfolio-image" src="{{ item.image.url }}" alt="">
             <div onclick="" class="overlay">
                 <h2>{{ item.title }}</h2>
                 <span>{{ item.short_description|truncatechars:32 }}</span>
                 <br>
-                <a href="{% url "project_page" item.pk %}" class="sq-button">MORE</a>
+                <a href="{{ item.url }}" target="_blank" class="sq-button">MORE</a>
             </div>
         </div>
     {% endfor %}

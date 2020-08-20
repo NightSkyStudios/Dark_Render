@@ -10,6 +10,7 @@ urlpatterns = [
     path('about/', about, name='about'),
     path('contact/', contact, name='contact'),
     path('projects/', projects, name='projects'),
+    path('vr/', vr_tours, name='vr'),
     path('project/<id>', project_page, name='project_page'),
     path(r'tinymce/', include('tinymce.urls')),
 ]
