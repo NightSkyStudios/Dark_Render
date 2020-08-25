@@ -45,14 +45,15 @@
         <a class="navbar-brand" href="{% url 'index' %}">
             <img src="{% static 'img/LOGO_FIN.png' %}" alt="">
         </a>
-        <iframe class="vr_main" src="https://dark-render.com/vr-main/" title="W3Schools Free Online Web Tutorials" ></iframe>
+        <iframe class="vr_main" src="https://dark-render.com/vr-main/"
+                title="W3Schools Free Online Web Tutorials"></iframe>
         <div class="hero__slideContent text-center">
-                            <h1>3D Modeling Vr Tour</h1>
-                            <p>Eye-Catch VR tour</p>
-                            <a class="btn btn--leftBorder btn--rightBorder"
-                               href="{% url 'vr' %}">View More</a>
-                            <span class="hero__slideContent--right"></span>
-                        </div>
+            <h1>3D Modeling Vr Tour</h1>
+            <p>Eye-Catch VR tour</p>
+            <a class="btn btn--leftBorder btn--rightBorder"
+               href="{% url 'vr' %}">View More</a>
+            <span class="hero__slideContent--right"></span>
+        </div>
         {#        <div class="owl-carousel owl-theme heroCarousel">#}
         {#                <div class="item">#}
         {#                    <div class="hero__slide">#}
@@ -62,14 +63,18 @@
         {#        </div>#}
         {#    </div>#}
 </header>
-<section class="portfolio section-margin" style="margin-top: 4rem">
+<section class="portfolio section-margin" style="margin-top: 2rem">
     <div class="px-3">
         <div class="section-intro" style="text-align: center;">
             <h4 class="section-intro__title">OUR PORTFOLIO</h4>
             <h2 class="section-intro__subtitle bottom-border_index align-items-center">Services</h2>
+            <picture>
+                <source srcset="{% static 'img/pngflow.webp' %}" type="image/webp">
+                <a href="#services"><img class="index-arrow" src="{% static 'img/pngflow.png' %}" alt=""></a>
+            </picture>
         </div>
 
-        <div class="row align-items-center">
+        <div id="services" class="row align-items-center">
             <div class="col-md-6 mb-4 mb-md-0 px-0">
                 <div onclick="" class="portfolio__img">
                     <a href="{% url 'projects' %}?filter=EX">
@@ -96,7 +101,7 @@
             <div class="col-md-6 pr-xl-5 order-2 order-md-1">
                 <h4 class="section-intro__title left-border">Modeling</h4>
                 <h2 class="section-intro__subtitle small">Furniture Modeling</h2>
-                <p >You send drawings and materials images, and we create High Poly Model.
+                <p>You send drawings and materials images, and we create High Poly Model.
                     <br>
                     With UW map, and provide High Resolution images of furniture
                 </p>
@@ -241,9 +246,6 @@
 </section>
 
 
-
-
-
 <section class="tips tips-bg">
     <div class="container">
         <div class="row align-items-center">
@@ -334,6 +336,16 @@
     });
 
     filter('.{{ filter }}')
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
 </script>
 </body>
 </html>

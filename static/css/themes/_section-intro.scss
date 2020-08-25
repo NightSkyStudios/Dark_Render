@@ -74,14 +74,13 @@
 
          &.bottom-border_index {
             padding-bottom: 30px;
-            margin-bottom: 75px;
             position: relative;
 
             &:after {
                 content: "";
                 display: block;
                 height: 2px;
-                min-width: 150%;
+                min-width: 115%;
                 position: absolute;
                 bottom: 0;
                 left: 50%;
