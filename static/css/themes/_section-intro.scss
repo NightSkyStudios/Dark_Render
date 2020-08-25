@@ -51,7 +51,7 @@
 
         &.bottom-border {
             padding-bottom: 30px;
-            margin-bottom: 50px;
+            margin-bottom: 75px;
             position: relative;
 
             &:after {
@@ -72,6 +72,28 @@
             }
         }
 
+         &.bottom-border_index {
+            padding-bottom: 30px;
+            margin-bottom: 75px;
+            position: relative;
+
+            &:after {
+                content: "";
+                display: block;
+                height: 2px;
+                min-width: 150%;
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                background: $primary-color;
+
+                transform: translateX(-50%);
+            }
+
+            &.small {
+                font-size: 2rem;
+            }
+        }
         &.bottom-border-left {
             padding-bottom: 30px;
             // margin-bottom: 50px;

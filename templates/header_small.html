@@ -1,7 +1,10 @@
 {% load static %}
 <header class="project-bg">
     <a class="navbar-brand" href="{% url 'index' %}">
-        <img src="{% static 'img/LOGO_FIN.png' %}" alt="">
+        <picture>
+            <source srcset="{% static 'img/LOGO_FIN.webp' %}" type="image/webp">
+            <img src="{% static 'img/LOGO_FIN.png' %}" alt="">
+        </picture>
         <br>
         <span>High quality at the best price</span>
     </a>

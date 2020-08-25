@@ -1,7 +1,10 @@
 {% load static %}
 <header class="hero-banner bg-cover" style="background-image: url({{ image }})">
     <a class="navbar-brand" href="{% url 'index' %}">
-        <img src="{% static 'img/LOGO_FIN.png' %}" alt="">
+        <picture>
+            <source srcset="{% static 'img/LOGO_FIN.webp' %}" type="image/webp">
+            <img src="{% static 'img/LOGO_FIN.png' %}" alt="">
+        </picture>
     </a>
 
     <div class="container">
