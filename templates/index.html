@@ -1,8 +1,9 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta property="og:site_name" content="Dark Render"/>
@@ -11,12 +12,13 @@
           content="DARK RENDER is based in the beautiful city of Lviv, where historical buildings hide a buzzing party, food and art scene.The DARK RENDER team is comprised of a diverse and skillful group of professionals who hail from over 4 different countries."/>
     <meta property="og:url" content="https://dark-render.com/">
     <meta property="og:type" content="art-studio"/>
-    <meta name="google-site-verification" content="QgCDHyZbmSZjBfl99MtT5aVL-MFlKhlVwKzCj5h0HAw" />
+    <meta name="google-site-verification" content="QgCDHyZbmSZjBfl99MtT5aVL-MFlKhlVwKzCj5h0HAw"/>
     <meta property="og:image" content="{% static 'img/LOGO_FIN.png' %}">
     <meta name="description"
           content="We model full detailed building in 3D, our artists will create atmospheric photo realistic images, to your liking">
     <meta name="robots" content="index, follow">
-    <meta name="keywords" content="render studio, exterior render, darkness render, photorealistic 3d furniture, 3d exterior render, studio render"/>
+    <meta name="keywords"
+          content="render studio, exterior render, darkness render, photorealistic 3d furniture, 3d exterior render, studio render"/>
 
     <title>Dark Render | Create your 3D Exterior render</title>
 
@@ -32,8 +34,8 @@
     <link rel="stylesheet" href="{% static 'vendor/owl-carousel/owl.carousel.min.css' %}">
     <link rel="stylesheet" href="{% static 'vendor/bootstrap/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
-{% include 'gtags_head.html' %}
-        <script src="{% static 'js/isotope.pkgd.js' %}"></script>
+    {% include 'gtags_head.html' %}
+    <script src="{% static 'js/isotope.pkgd.js' %}"></script>
 </head>
 <body>
 {% include 'gtags_body.html' %}
@@ -68,7 +70,10 @@
         <div class="row align-items-center about-center">
             <div class="col-md-5">
                 <div class="about__img text-center text-md-left mb-5 mb-md-0">
-                    <img class="img-fluid" src="{% static 'img/index/portret.png' %}" alt="">
+                    <picture>
+                        <source srcset="{% static 'img/index/portret.webp' %}" type="image/webp">
+                        <img class="img-fluid" src="{% static 'img/index/portret.png' %}" alt="">
+                    </picture>
                 </div>
             </div>
             <div class="col-md-7 pl-xl-5">
@@ -128,8 +133,14 @@
             <div class="col-md-6 mb-4 mb-md-0 px-0">
                 <div onclick="" class="portfolio__img">
                     <a href="{% url 'projects' %}?filter=EX">
-                        <img class="img-fluid" src="{% static 'img/index/2_2.jpg' %}" alt=""> {# TODO:change #}
-                        <img class="img-fluid img-absolute" src="{% static 'img/index/2.jpg' %}" alt="">
+                        <picture>
+                            <source srcset="{% static 'img/index/2_2.webp' %}" type="image/webp">
+                            <img class="img-fluid" src="{% static 'img/index/2_2.jpg' %}" alt=""> {# TODO:change #}
+                        </picture>
+                        <picture>
+                            <source srcset="{% static 'img/index/2.webp' %}" type="image/webp">
+                            <img class="img-fluid img-absolute" src="{% static 'img/index/2.jpg' %}" alt="">
+                        </picture>
                     </a>
                 </div>
             </div>
@@ -154,8 +165,14 @@
             <div class="col-md-6 mb-4 mb-md-0 order-1 order-md-2 px-0">
                 <div onclick="" class="portfolio__img">
                     <a href="{% url 'projects' %}?filter=FR">
-                        <img class="img-fluid" src="{% static 'img/index/1_1.jpg' %}" alt=""> {# TODO:change #}
-                        <img class="img-fluid img-absolute" src="{% static 'img/index/1.jpg' %}" alt="">
+                        <picture>
+                            <source srcset="{% static 'img/index/1_1.webp' %}" type="image/webp">
+                            <img class="img-fluid" src="{% static 'img/index/1_1.jpg' %}" alt=""> {# TODO:change #}
+                        </picture>
+                        <picture>
+                            <source srcset="{% static 'img/index/1.webp' %}" type="image/webp">
+                            <img class="img-fluid img-absolute" src="{% static 'img/index/1.jpg' %}" alt="">
+                        </picture>
                     </a>
                 </div>
             </div>
@@ -164,8 +181,14 @@
             <div class="col-md-6 mb-4 mb-md-0 px-0">
                 <div onclick="" class="portfolio__img">
                     <a href="{% url 'projects' %}?filter=IT">
-                        <img class="img-fluid" src="{% static 'img/index/3_3.jpg' %}" alt=""> {# TODO:change #}
-                        <img class="img-fluid img-absolute" src="{% static 'img/index/3.jpg' %}" alt="">
+                       <picture>
+                            <source srcset="{% static 'img/index/3_3.webp' %}" type="image/webp">
+                            <img class="img-fluid" src="{% static 'img/index/3_3.jpg' %}" alt=""> {# TODO:change #}
+                        </picture>
+                        <picture>
+                            <source srcset="{% static 'img/index/3.webp' %}" type="image/webp">
+                            <img class="img-fluid img-absolute" src="{% static 'img/index/3.jpg' %}" alt="">
+                        </picture>
                     </a>
                 </div>
             </div>
@@ -175,7 +198,7 @@
                 <p style="margin-bottom: 0;">Provide interior images with detailed materials and lights </p>
             </div>
         </div>
-            <div class="row align-items-center">
+        <div class="row align-items-center">
             <div class="col-md-6 pr-xl-5 order-2 order-md-1">
                 <h4 class="section-intro__title left-border">VR Tours</h4>
                 <h2 class="section-intro__subtitle small">3D Modeling VR Tours</h2>
@@ -188,8 +211,14 @@
             <div class="col-md-6 mb-4 mb-md-0 order-1 order-md-2 px-0">
                 <div onclick="" class="portfolio__img">
                     <a href="{% url 'vr' %}">
-                        <img class="img-fluid" src="{% static 'img/index/1_1.jpg' %}" alt=""> {# TODO:change #}
-                        <img class="img-fluid img-absolute" src="{% static 'img/index/1.jpg' %}" alt="">
+                       <picture>
+                            <source srcset="{% static 'img/index/1_1.webp' %}" type="image/webp">
+                            <img class="img-fluid" src="{% static 'img/index/1_1.jpg' %}" alt=""> {# TODO:change #}
+                        </picture>
+                        <picture>
+                            <source srcset="{% static 'img/index/1.webp' %}" type="image/webp">
+                            <img class="img-fluid img-absolute" src="{% static 'img/index/1.jpg' %}" alt="">
+                        </picture>
                     </a>
                 </div>
             </div>
@@ -197,7 +226,7 @@
         <div class="section-intro mt-5" style="text-align: center;">
             <h2 class="section-intro__subtitle bottom-border align-items-center">Our last works</h2>
         </div>
-        <div  class="portfolio-grid">
+        <div class="portfolio-grid">
             {% for item in projects %}
                 <div class="portfolio-item">
                     <img class="portfolio-image" src="{{ item.image.url }}" alt="">
