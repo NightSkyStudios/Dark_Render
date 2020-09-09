@@ -24,9 +24,6 @@
 
     <link rel="shortcut icon" type="image/png" href="{% static 'img/favicon.ico' %}">
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap&subset=cyrillic"
-          rel="stylesheet">
-
     <link rel="stylesheet" href="{% static 'vendor/themify-icons/themify-icons.css' %}">
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
@@ -63,15 +60,70 @@
         {#        </div>#}
         {#    </div>#}
 </header>
+ <div class="section-intro" style="text-align: center;">
+            <h4 class="section-intro__title">ABOUT US</h4>
+            <h2 class="section-intro__subtitle bottom-border align-items-center">What we do</h2>
+        </div>
+<section class="about section-margin mb-5">
+    <div class="container">
+        <div class="row align-items-center about-center">
+            <div class="col-md-5">
+                <div class="about__img text-center text-md-left mb-5 mb-md-0">
+                    <picture>
+                        <source srcset="{% static 'img/index/portret.webp' %}" type="image/webp">
+                        <img class="img-fluid" src="{% static 'img/index/portret.png' %}" alt="">
+                    </picture>
+                </div>
+            </div>
+            <div class="col-md-7 pl-xl-5">
+                <div class="section-intro">
+                    <h4 class="section-intro__title">About our Company</h4>
+                    <h2 class="section-intro__subtitle">WHO WE ARE?</h2>
+                </div>
+                <p>DARK-RENDER
+                    Is a creative studio that produces high-end visualizations. We provide our clients with top-class
+                    photorealistic 3D renderings including still images, animations, virtual reality spaces and virtual
+                    tours. We bring designs to life with the latest technologies. <br><br> We work with the whole world
+                    from 2015 .</p>
+                <p>Founder : Orest Moskal</p>
+                <a class="btn btn--rightBorder mt-4" href="{% url 'about' %}">Read More</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="overview" style=" margin-bottom: 4rem;">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
+                <div class="media align-items-center overview__single">
+                    <span class="overview__single__icon"><i class="ti-crown"></i></span>
+                    <div class="media-body">
+                        <h3>214</h3>
+                        <p>Projects done</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
+                <div class="media align-items-center overview__single">
+                    <span class="overview__single__icon"><i class="ti-user"></i></span>
+                    <div class="media-body">
+                        <h3>8</h3>
+                        <p>3D Artists</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
 <section class="portfolio section-margin" style="margin-top: 2rem">
     <div class="px-3">
         <div class="section-intro" style="text-align: center;">
             <h4 class="section-intro__title">OUR PORTFOLIO</h4>
-            <h2 class="section-intro__subtitle bottom-border_index align-items-center">Services</h2>
-            <picture>
-                <source srcset="{% static 'img/pngflow.webp' %}" type="image/webp">
-                <a href="#services"><img class="index-arrow" src="{% static 'img/pngflow.png' %}" alt=""></a>
-            </picture>
+            <h2 class="section-intro__subtitle bottom-border align-items-center">Services</h2>
         </div>
 
         <div id="services" class="row align-items-center">
@@ -189,61 +241,7 @@
         </div>
     </div>
 </section>
-<section class="about section-margin mb-5">
-    <div class="container">
-        <div class="row align-items-center about-center">
-            <div class="col-md-5">
-                <div class="about__img text-center text-md-left mb-5 mb-md-0">
-                    <picture>
-                        <source srcset="{% static 'img/index/portret.webp' %}" type="image/webp">
-                        <img class="img-fluid" src="{% static 'img/index/portret.png' %}" alt="">
-                    </picture>
-                </div>
-            </div>
-            <div class="col-md-7 pl-xl-5">
-                <div class="section-intro">
-                    <h4 class="section-intro__title">About our Company</h4>
-                    <h2 class="section-intro__subtitle">WHO WE ARE?</h2>
-                </div>
-                <p>DARK-RENDER
-                    Is a creative studio that produces high-end visualizations. We provide our clients with top-class
-                    photorealistic 3D renderings including still images, animations, virtual reality spaces and virtual
-                    tours. We bring designs to life with the latest technologies. <br><br> We work with the whole world
-                    from 2015 .</p>
-                <p>Founder : Orest Moskal</p>
-                <a class="btn btn--rightBorder mt-4" href="{% url 'about' %}">Read More</a>
-            </div>
-        </div>
-    </div>
-</section>
 
-
-<section class="overview" style=" margin-bottom: 4rem;">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
-                <div class="media align-items-center overview__single">
-                    <span class="overview__single__icon"><i class="ti-crown"></i></span>
-                    <div class="media-body">
-                        <h3>214</h3>
-                        <p>Projects done</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-6 col-lg-4 col-xl-3 mb-4 mb-xl-0">
-                <div class="media align-items-center overview__single">
-                    <span class="overview__single__icon"><i class="ti-user"></i></span>
-                    <div class="media-body">
-                        <h3>8</h3>
-                        <p>3D Artists</p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</section>
 
 
 <section class="tips tips-bg">
